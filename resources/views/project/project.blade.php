@@ -85,7 +85,7 @@
             </div>
         </div>
         <div class="app-section bottom-border" style="color:#665;height:20px;  ">
-            别名：{{$project->nike_name}}
+            别名：{{$project->nick_name}}
         </div>
 
         <div class="app-section"  style="font-size:16px;color:#dd2f30;font-weight: 600;">
@@ -188,10 +188,10 @@
         </div>
         @foreach($consultants as $consultant)
         <div class="app-section " style="position:relative;" >
-                <div style="width:25%; float:left;position:relative;">
+                <div style="width:20%; float:left;position:relative;">
                     <img  src ="{{asset('/vendor/project/img/user_1.png')}}" width="50px" >
                 </div>
-                <div class="consultantList" style="width:45%; float:left;position:relative;line-height:25px; margin:0px;padding:0px;"  data-id="{{$consultant->id}}" >
+                <div class="consultantList" style="width:50%; float:left;position:relative;line-height:25px; margin:0px;padding:0px;"  data-id="{{$consultant->id}}" >
                     <span style="font-size:14px;">{{$consultant->name}}</span> <span style="color:orange;font-size:14px;">&nbsp;好评率 {{$consultant->good_rate}}%</span><br/>
                      <span style="color:#949494">带看{{$consultant->people_count}}人 &nbsp; 成交{{$consultant->deal_count}}套</span>
                 </div>
