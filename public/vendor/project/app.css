@@ -1,0 +1,294 @@
+/* Page */
+
+.app-page {}
+
+
+
+/* Topbar */
+
+.app-topbar.teal {
+	background-color: #2B9;
+	color: #F3F4F5;
+}
+.app-topbar.green {
+	background-color: #3C7;
+	color: #F3F4F5;
+}
+.app-topbar.yellow {
+	background-color: #EC1;
+	color: #F3F4F5;
+}
+.app-topbar.orange {
+	background-color: #E82;
+	color: #F3F4F5;
+}
+.app-topbar.red {
+	background-color: #DD4539;
+	color: #F3F4F5;
+}
+.app-topbar.blue {
+	background-color: #4486F0;
+	color: #F3F4F5;
+}
+.app-topbar.dark-blue {
+	background-color: #345;
+	color: #F3F4F5;
+}
+
+.app-topbar .app-title {
+	font-size: 17px;
+	font-weight: 500;
+}
+.app-android .app-topbar .app-title {
+	float: left;
+	/*padding-left: 15px;*/
+	/*padding-right: 8px;*/
+	width: auto;
+	font-size: 19px;
+	font-weight: 700;
+	text-align: left;
+}
+.app-android .app-topbar .app-button.left ~ .app-title {
+	/*padding-left: 60px;*/
+
+}
+.app-topbar .app-button {
+	font-weight: 300;
+	-webkit-transition: opacity 0.25s ease-out;
+	transition: opacity 0.25s ease-out;
+}
+.app-android .app-topbar .app-button {
+	padding: 0 13px;
+	font-weight: 400;
+	-webkit-transition: background-color 0.25s ease-out;
+	transition: background-color 0.25s ease-out;
+}
+.app-topbar .app-button.active {
+	opacity: 0.65;
+}
+.app-android .app-topbar .app-button.active {
+	opacity: 1;
+	background-color: rgba(0,0,0,0.2);
+}
+.app-topbar .app-button.active,
+.app-android .app-topbar .app-button.active,
+.app-android-2 .app-topbar .app-button,
+.app-android-4 .app-topbar .app-button {
+	-webkit-transition: none;
+	transition: none;
+}
+.app-topbar .app-button[data-back].left {
+	padding: 15px 0 15px 27px;
+	height: 14px;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAoCAYAAADkDTpVAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAADDSURBVHjatJbBDsQgCERhPtf/v7OX1mQ3bgvM4KXGNu+JFdQjwtZaJmpxPf0egOlanPoYgH+NYQi+32EQTi9RZD7CJNzMHJPwTgQleFVQhlcELXhW0IZnBBT8TUDDnwQS+D+BDH4SSOG/Ajm8k8lerSsozL4MVx+ZjwIXZjQVQTACn5Cg+SODWSKpBOSWpG4VEglEyRXMNqUk2TxoSyqJ1pJMVVPq+l6SdKtpWsKUa2cyWSZRHDiuvr5nJa6K4CTZ/c8ATjIoi8Wura8AAAAASUVORK5CYII=);
+	background-repeat: no-repeat;
+	-webkit-background-size: 12px 20px;
+	background-size: 12px 20px;
+	background-position: 8px center;
+	line-height: 14px;
+}
+.app-android .app-topbar .app-button[data-back].left {
+	padding: 15px 0 15px 27px;
+	height: 14px;
+	width: 24px;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAoCAYAAADkDTpVAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAADDSURBVHjatJbBDsQgCERhPtf/v7OX1mQ3bgvM4KXGNu+JFdQjwtZaJmpxPf0egOlanPoYgH+NYQi+32EQTi9RZD7CJNzMHJPwTgQleFVQhlcELXhW0IZnBBT8TUDDnwQS+D+BDH4SSOG/Ajm8k8lerSsozL4MVx+ZjwIXZjQVQTACn5Cg+SODWSKpBOSWpG4VEglEyRXMNqUk2TxoSyqJ1pJMVVPq+l6SdKtpWsKUa2cyWSZRHDiuvr5nJa6K4CTZ/c8ATjIoi8Wura8AAAAASUVORK5CYII=);
+	-webkit-background-size: 14px 24px;
+	background-size: 14px 24px;
+	background-position: center;
+	color: transparent;
+}
+
+.app-android .app-topbar > :last-child:after {
+	content: "";
+	clear: both;
+}
+
+
+
+/* Content */
+
+.app-page,
+.app-content {
+	background-color: rgb(239,239,244);
+}
+
+.app-section,
+.app-list > li,
+.app-list > li.app-button,
+.app-content .app-button,
+.app-input {
+	border: none;
+}
+
+.app-section {
+	margin: 16px;
+	padding: 8px;
+	background: #FFF;
+	/*border-bottom: 1px solid rgba(0,0,0,0.1);*/
+	/*-webkit-border-radius: 6px;*/
+	/*border-radius: 6px;*/
+}
+.app-ios-7 .app-section,
+.app-ios-8 .app-section {
+	border-bottom: none;
+}
+.app-section.app-button {
+	margin: 16px;
+	padding: 0;
+}
+p.app-section {
+	padding: 12px 16px;
+	color: #665;
+}
+.app-content .app-section > * {
+	margin: 8px 0 0;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+.app-content .app-section > :first-child {
+	margin-top: 0;
+}
+
+
+
+/* Lists */
+
+.app-list {}
+.app-list > label {
+	height: 28px;
+	background-color: #D5E5E6;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #778;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 28px;
+}
+.app-android .app-list > label {
+	font-size: 11px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.app-list > li {
+	background-color: #FFF;
+	color: #444;
+}
+.app-list > li,
+.app-list > li.app-button {
+	border-top: 1px solid rgba(0,0,0,0.05);
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.app-android .app-list > li,
+.app-android .app-list > li.app-button {
+	padding-top: 0;
+	padding-bottom: 0;
+	height: 47px;
+	line-height: 47px;
+}
+.app-list > li.app-button.active {
+	border-top: 1px solid rgba(0,0,0,0.0);
+}
+.app-list > li:first-child,
+.app-list > li.app-button:first-child,
+.app-list > label + li,
+.app-list > label + li.app-button,
+.app-list > label + li.app-button.active,
+.app-list > li.app-button.active + li,
+.app-list > li.app-button.active + li.app-button {
+	border-top-color: transparent;
+}
+
+
+
+/* Buttons */
+
+.app-content .app-button {
+	background-color: #FFF;
+	color: #17B;
+}
+.app-content .app-button.active {
+	background-color: #DDD;
+}
+.app-content .app-button.teal {
+	background-color: #2B9;
+	color: #F3F4F5;
+}
+.app-content .app-button.teal.active {
+	background-color: #197;
+}
+.app-content .app-button.green {
+	background-color: #3C7;
+	color: #F3F4F5;
+}
+.app-content .app-button.green.active {
+	background-color: #2A6;
+}
+.app-content .app-button.yellow {
+	background-color: #EC1;
+	color: #F3F4F5;
+}
+.app-content .app-button.yellow.active {
+	background-color: #DB0;
+}
+.app-content .app-button.orange {
+	background-color: #E82;
+	color: #F3F4F5;
+}
+.app-content .app-button.orange.active {
+	background-color: #C50;
+}
+.app-content .app-button.red {
+	background-color: #DD4539;
+	color: #F3F4F5;
+}
+.app-content .app-button.red.active {
+	background-color: #C43;
+}
+.app-content .app-button.blue {
+	background-color: #4486F0;
+	color: #F3F4F5;
+}
+.app-content .app-button.blue.active {
+	background-color: #27A;
+}
+.app-content .app-button.dark-blue {
+	background-color: #345;
+	color: #F3F4F5;
+}
+.app-content .app-button.dark-blue.active {
+	background-color: #234;
+}
+
+
+
+/* Inputs */
+input.app-input {
+	height: 44px;
+	background: #FFF;
+	line-height: 24px;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.app-android input.app-input {
+	height: 48px;
+	line-height: 18px;
+}
+.app-section input.app-input {
+	border-bottom: none;
+}
+.app-android .app-section input.app-input {
+	height: 40px;
+	line-height: 20px;
+}
+.app-input[type="search"] {
+	padding-left: 34px;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACjElEQVR42r3Wz2sTQRjG8e2maW1rTYIoaPEgHqz/gD+KFi8VRb0pVPTi2UPNQRRCEHpQkCKIp0ilQg/BVqQKUi8q1lRzERQ0x3pQVKJIxTaxpql+DzkMD+xkNo1d+NBudt5535md3VnPdmQyGfP/FrSjC+trOhDxmnxo4k70I4lxzOA18riPYRzFFolvSvJBPMU8/los4w3S8JtRRCfGUZJEK3KuKiigV4pwHzl/43gYkLSKMhZRQsVsZ7T9jN1ShFPyCCahHVbwEiM4gyM4gRQe4Tu04DnskCLqFjACTf4Vg4gHxPo4gCfQ2HyY0e/BvIziIzY7LtgIpqC37YLrLIxJ8AK2SbBLIW+ln29ordfBdryXFZ2Eh7CLuBdVo4gyTmuhGjyA30byOexq5B2CKLIyC7fqBZ6V0U8jagkJ299jtHmWVXxJAsZq1xot4DD+GP3NYqOtgJQUkFllAQMoG/3l9WnSXS4p9yy7ys3suAzoOWK2gJMS8AKJBpP7uCj9PagXtBdFI+AH+mvXwhbQjbzslFfqPYYJ5OQ23IEPD2HeA6dkXyihz6WDFJblNTpkPN+BiWHO5E8ZyCvXytfhiwRXkZa2Qf0cRBG6F+yXWGsRhwL292nsRBei8NGKDmzCZePbQL1DPMw9TGJFR1IzgxtI4yqm8Av6LaDnOfSEmYlzWNKZCKJtAtrnEJcirNvqPnwK6tTyyfbM+F2vF9DmOhPmLfmABSzJVlvBIooYRQIeJiyFFlzXhJ73YQjXMYqbSOEYuqXtBtyTxLomtjrv8a7taswiJiy3bxYxr8mHLmYfWcua6JHQ5hcCP2BN3Eb7/8yva2LSSH4XsbVKbm5413AeCePamhYRRYv52z/AKK4/BRObOQAAAABJRU5ErkJggg==);
+	background-repeat: no-repeat;
+	background-position: 12px center;
+	-webkit-background-size: 16px 16px;
+	background-size: 16px 16px;
+}
+.app-input[type="search"].no-icon, .app-android .app-input[type="search"].no-icon-android, .app-ios .app-input[type="search"].no-icon-ios {
+	padding-left: 12px;
+	background-image: none;
+}

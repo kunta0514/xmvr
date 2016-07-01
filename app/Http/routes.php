@@ -19,7 +19,8 @@ Route::group(['prefix' => 'project', 'namespace' => 'Project'], function()
 {
     Route::resource('project', 'ProjectController@index');
     //get、post等按顺序，按分组些，不能穿插写
-    Route::get('/', 'ProjectController@index');
+    Route::get('/', 'ProjectController@default_page');
+    Route::get('/{id}', 'ProjectController@index');
 
     Route::get('/vrglasses/{id}', 'ProjectController@vrglasses');
     Route::get('/vr/{id}', 'ProjectController@vr');

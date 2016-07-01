@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Project;
 
 use Illuminate\Http\Request;
-
+use App\Model\Project;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -14,11 +14,26 @@ class Projectcontroller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    public function index($id) {
+
+        if(isset($id) == true){
+            $project = Project::find($id);
+        }else{
+            $project = Project::find(2);
+        }
+
+
+        return view('Project.project',['project'=> $project]);
     }
 
+    public function default_page() {
+
+
+        $project = Project::find(2);
+
+
+        return view('Project.project',['project'=> $project]);
+    }
     /**
      * Show the form for creating a new resource.
      *
