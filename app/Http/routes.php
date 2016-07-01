@@ -14,3 +14,27 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['prefix' => 'project', 'namespace' => 'Project'], function()
+{
+    Route::resource('project', 'ProjectController@index');
+    //get、post等按顺序，按分组些，不能穿插写
+    Route::get('/', 'ProjectController@index');
+
+});
+
+Route::group(['prefix' => 'home', 'namespace' => 'Home'], function()
+{
+    Route::resource('home', 'Home@index');
+    //get、post等按顺序，按分组些，不能穿插写
+    Route::get('/', 'Home@index');
+
+});
+
+Route::group(['prefix' => 'user', 'namespace' => 'User'], function()
+{
+    Route::resource('user', 'User@index');
+    //get、post等按顺序，按分组些，不能穿插写
+    Route::get('/', 'User@index');
+
+});
