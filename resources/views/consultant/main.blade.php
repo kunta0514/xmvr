@@ -153,7 +153,7 @@
                             </div>
                         </li>
                         <li class="mui-table-view-cell mui-media">
-                            <a href="/project/vrglasses/">
+                            <a href="/project/vrglasses/dahudi">
                                 <img class="mui-media-object mui-pull-left" src="{{asset('img/room/1.jpg')}}">
                                 <div class="mui-media-body">
                                     1号楼-3室2厅
@@ -162,7 +162,7 @@
                             </a>
                         </li>
                         <li class="mui-table-view-cell mui-media">
-                            <a href="/project/vrglasses/">
+                            <a href="/project/vrglasses/dahudi">
                                 <img class="mui-media-object mui-pull-left" src="{{asset('img/room/2.jpg')}}">
                                 <div class="mui-media-body">
                                     1号楼-2室2厅
@@ -171,7 +171,7 @@
                             </a>
                         </li>
                         <li class="mui-table-view-cell mui-media">
-                            <a href="/project/vrglasses/">
+                            <a href="/project/vrglasses/dahudi">
                                 <img class="mui-media-object mui-pull-left" src="{{asset('img/room/1.jpg')}}">
                                 <div class="mui-media-body">
                                     1号楼-2室1厅
@@ -180,7 +180,7 @@
                             </a>
                         </li>
                         <li class="mui-table-view-cell mui-media">
-                            <a href="/project/vrglasses/">
+                            <a href="/project/vrglasses/dahudi">
                                 <img class="mui-media-object mui-pull-left" src="{{asset('img/room/2.jpg')}}">
                                 <div class="mui-media-body">
                                     1号楼-1室1厅

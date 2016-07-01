@@ -70,8 +70,8 @@ html, body {
 </head>
 <body>
 	<div class="full">横屏以进入VR体验</div>
-	<iframe name="left" class="screen left" src="/project/vr/dahudi"> </iframe>
-	<iframe name="right" class="screen right" src="/project/vr/dahudi"> </iframe>
+	<iframe name="left" class="screen left" src="/project/vr/{{$id}}"> </iframe>
+	<iframe name="right" class="screen right" src="/project/vr/{{$id}}"> </iframe>
 	<div class="console"></div>
 	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 	<script src="{{asset('vendor/ino.sound/ion.sound.min.js')}}"></script>
