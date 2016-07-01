@@ -14,9 +14,15 @@ class Projectcontroller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    public function index() {
+        $row1 = ["name"=>"张三","age"=>"18"];
+        $row2 = ["name"=>"李四","age"=>"19"];
+        $row3 = ["name"=>"王五","age"=>"17"];
+
+        $rows = array($row1,$row2,$row3);
+
+        $pageparam = ['body'=>'body内容就是666','title'=>'title标题就是666','rows'=> $rows];
+        return view('Project.project',compact('pageparam'));
     }
 
     /**
