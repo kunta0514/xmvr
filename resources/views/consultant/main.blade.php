@@ -1,8 +1,7 @@
 @extends('mobiletemplates.default')
 @section('content')
     <header class="mui-bar mui-bar-nav">
-        <a class="mui-icon mui-icon-left-nav mui-pull-left"></a>
-        <a class="mui-icon mui-icon-reply mui-pull-right"></a>
+        <a class="mui-icon mui-icon-left-nav mui-pull-left" href="javascript:history.back();"></a>
         <h1 class="mui-title">置业顾问</h1>
     </header>
     <style>
@@ -45,6 +44,7 @@
 
         .consultant-card-mark table td div{
             font-size:x-small;
+            color: #000;
         }
 
         .consultant-card-mark ul{
@@ -126,8 +126,10 @@
                 <table>
                     <tr>
                         <td>
-                            <span>26套</span>
-                            <div>最近成交</div>
+                        	<a href="/user/consultant/analysis">
+	                            <span>26</span>
+	                            <div>今日浏览</div>
+                            </a>
                         </td>
                         <td>
                             <span>201人</span>
