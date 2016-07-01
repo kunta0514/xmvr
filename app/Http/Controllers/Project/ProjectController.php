@@ -82,7 +82,7 @@ class Projectcontroller extends Controller
      */
     public function vrglasses($id)
     {
-        return view("project.vrglasses", ['id' => $id]);
+        return view("project.vrglasses", ['id' => 'dahudi']);
     }
     
     /**
