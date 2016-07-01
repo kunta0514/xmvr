@@ -64,7 +64,7 @@ html, body {
 	z-index: 4;
 	background: #fff;
 	bottom: 0;
-	`
+	display: none;
 }
 </style>
 </head>
@@ -77,42 +77,51 @@ html, body {
 	<script src="{{asset('vendor/ino.sound/ion.sound.min.js')}}"></script>
 	<script>
 	(function(){
-        window.addEventListener('deviceorientation', onWindowDeviceorientation, false);
-        var _lastOrientation;
+        var _lastSound = '';
         var _data = {
-			"beer_can_opening": {"alpha": [90, 105], "beta": [-10, 5], "gamma": [-75, -60]}
+			"beer_can_opening": {"alpha": [90, 105], "beta": [-10, 5], "gamma": [-75, -60]}, //房门
+			"bell_ring": {"alpha": [345, 10], "beta": [0, 10], "gamma": [-50, -60]}, //沙发
+			"branch_break": {"alpha": [155, 165], "beta": [-5, 10], "gamma": [-85, -40]}, //床
         };
         function onWindowDeviceorientation(e) {
         	$('.console').text(JSON.stringify(e));
 
         	var sound = findSound(e);
-        	if (!!sound){
+        	//$('.console').text(sound);
+        	if (!!sound && sound != _lastSound){
             	// play sound
+            	_lastSound && ion.sound.stop(_lastSound);
         		ion.sound.play(sound);
         	}
-        	_lastOrientation = e;
-        }
+        	_lastSound = sound;
+        };
 
         function findSound(orientation){
             var result;
+            function _match(orientation, o){
+            	if (!orientation) return false;
+            	if ((o.alpha[1] <= o.alpha[0] && (orientation.alpha >= o.alpha[0] || orientation.alpha <= o.alpha[1]))
+            		|| (orientation.alpha >= o.alpha[0] && orientation.alpha <= o.alpha[1])) {
+            		if ((o.beta[1] <= o.beta[0] && (orientation.beta >= o.beta[0] || orientation.beta <= o.beta[1]))
+            			|| (orientation.beta >= o.beta[0] && orientation.beta <= o.beta[1])) {
+            			if ((o.gamma[1] <= o.gamma[0] && (orientation.gamma >= o.gamma[0] || orientation.gamma <= o.gamma[1]))
+	            			|| (orientation.gamma >= o.gamma[0] && orientation.gamma <= o.gamma[1])) {
+	            			return true;
+	        			}	
+        			}	
+        		}
+            	return false;
+            }
             $.each(_data, function(k, o){
-            	if (orientation.alpha >= o.alpha[0] && orientation.alpha <= o.alpha[1] 
-                	&& orientation.beta >= o.beta[0] && orientation.beta <= o.beta[1]
-                	&& orientation.gamma >= o.gamma[0] && orientation.gamma <= o.gamma[1]) {
-            		if (_lastOrientation 
-                		&& _lastOrientation.alpha >= o.alpha[0] && _lastOrientation.alpha <= o.alpha[1] 
-                    	&& _lastOrientation.beta >= o.beta[0] && _lastOrientation.beta <= o.beta[1]
-                    	&& _lastOrientation.gamma >= o.gamma[0] && _lastOrientation.gamma <= o.gamma[1]) {
-                		return false;
-                	}
-                	result = k;
-            		return false;
+            	if (_match(orientation, o)){
+            		result = k;
+    				return false;
             	}
             });
             return result;
-        }
+        };
 
-        function registerSound(){
+        function init(){
             var sounds = [];
             $.each(_data, function(k, o){
             	sounds.push({name: k});
@@ -125,13 +134,16 @@ html, body {
 			    path: "/vendor/ino.sound/sounds/",
 			    preload: true,
 			    multiplay: true,
-			    volume: 0.9
+			    volume: 0.9,
+			    ready_callback: function() {
+			    	window.addEventListener('deviceorientation', onWindowDeviceorientation, false);
+			    }
 			});
-        }
+        };
 
-        registerSound();
+        init();
 	})();
-        
+	
     $(function(){
     	
     });
