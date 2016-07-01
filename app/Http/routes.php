@@ -21,6 +21,8 @@ Route::group(['prefix' => 'project', 'namespace' => 'Project'], function()
     //get、post等按顺序，按分组些，不能穿插写
     Route::get('/', 'ProjectController@index');
 
+    Route::get('/vrglasses', 'ProjectController@vrglasses');
+    Route::get('/vr/{id}', 'ProjectController@vr');
 });
 
 Route::group(['prefix' => 'home', 'namespace' => 'Home'], function()
