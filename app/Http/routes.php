@@ -36,8 +36,9 @@ Route::group(['prefix' => 'home', 'namespace' => 'Home'], function()
 
 Route::group(['prefix' => 'user', 'namespace' => 'User'], function()
 {
-    Route::resource('user', 'User@index');
+    Route::resource('user', 'UserController@index');
     //get、post等按顺序，按分组些，不能穿插写
     Route::get('/', 'ConsultantController@index');
+    Route::get('/login', 'UserController@index');
     Route::get('/consultant', 'ConsultantController@index');
 });
