@@ -6,9 +6,11 @@
         <h1 class="mui-title">置业顾问</h1>
     </header>
     <style>
-        .consultant-card .title{
-            font-size: smaller;
-            text-align: left;
+        .mui-bar{
+            background-color: white;
+        }
+        .consultant-card {
+            background-color: white;
         }
 
         .consultant-card .title {
@@ -24,6 +26,7 @@
         }
         .consultant-card-mark{
             width: 100%;
+            background-color: white;
         }
 
         .consultant-card-mark table{
@@ -51,7 +54,27 @@
             display:block;
             float:left;
         }
+        .consultant-video {
+            margin-top: 10px;
+            background-color: white;
+        }
 
+        .consultant-video .head {
+            text-align: left;
+            padding-left: 15px;
+            font-size: smaller;
+        }
+
+        .foot-btn{
+            margin-top: 10px;
+        }
+        .mui-media-body{
+            text-align: left;
+            font-size: smaller;
+        }
+        .mui-media-body p{
+            font-size: x-small;
+        }
 
         .mui-badge{
             border-radius:3px;
@@ -88,44 +111,75 @@
                 <table>
                     <tr>
                         <td>
-                            <span >26套</span>
+                            <span>26套</span>
                             <div>最近成交</div>
                         </td>
                         <td>
-                            <span >201人</span>
-                            <div >最近带看</div>
+                            <span>201人</span>
+                            <div>最近带看</div>
                         </td>
                         <td>
-                            <span >40%</span>
-                            <div >好评率</div>
+                            <span>40%</span>
+                            <div>好评率</div>
                         </td>
                     </tr>
-
                 </table>
             </div>
 
-            {{--<div class="row" >--}}
-                {{--<ul class="mui-table-view mui-grid-view mui-grid-9">--}}
-                    {{--<li class="mui-table-view-cell mui-media mui-col-xs-4">--}}
-                        {{--<a href="#">--}}
-                            {{--<span class="mui-icon mui-icon-home">26套</span>--}}
-                            {{--<div class="mui-media-body">最近成交</div>--}}
-                        {{--</a>--}}
-                    {{--</li>--}}
-                    {{--<li class="mui-table-view-cell mui-media mui-col-xs-4">--}}
-                        {{--<a href="#">--}}
-                            {{--<span class="mui-icon mui-icon-home">201人</span>--}}
-                            {{--<div class="mui-media-body">最近带看</div>--}}
-                        {{--</a>--}}
-                    {{--</li>--}}
-                    {{--<li class="mui-table-view-cell mui-media mui-col-xs-4">--}}
-                        {{--<a href="#">--}}
-                            {{--<span class="mui-icon mui-icon-home">40%</span>--}}
-                            {{--<div class="mui-media-body">好评率</div>--}}
-                        {{--</a>--}}
-                    {{--</li>--}}
-                {{--</ul>--}}
-            {{--</div>--}}
+            <div class="consultant-video">
+                <div class="head">
+                    我的作品
+                </div>
+                <div>
+                    <ul class="mui-table-view">
+                        <li class="mui-table-view-cell mui-hidden">cared
+                            <div id="M_Toggle" class="mui-switch mui-active">
+                                <div class="mui-switch-handle"></div>
+                            </div>
+                        </li>
+                        <li class="mui-table-view-cell mui-media">
+                            <a href="#">
+                                <img class="mui-media-object mui-pull-left" src="http://dcloudio.github.io/mui/assets/img/shuijiao.jpg">
+                                <div class="mui-media-body">
+                                    1号楼-3室2厅
+                                    <p class='mui-ellipsis'>132m-舒适三房-广阔空间</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mui-table-view-cell mui-media">
+                            <a href="#">
+                                <img class="mui-media-object mui-pull-left" src="http://dcloudio.github.io/mui/assets/img/muwu.jpg">
+                                <div class="mui-media-body">
+                                    1号楼-2室2厅
+                                    <p class='mui-ellipsis'>102m-三口之家-舒适温馨</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mui-table-view-cell mui-media">
+                            <a href="#">
+                                <img class="mui-media-object mui-pull-left" src="http://dcloudio.github.io/mui/assets/img/cbd.jpg">
+                                <div class="mui-media-body">
+                                    1号楼-2室1厅
+                                    <p class='mui-ellipsis'>96m-高性价比-投资首选</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mui-table-view-cell mui-media">
+                            <a href="#">
+                                <img class="mui-media-object mui-pull-left" src="http://dcloudio.github.io/mui/assets/img/yuantiao.jpg">
+                                <div class="mui-media-body">
+                                    1号楼-1室1厅
+                                    <p class='mui-ellipsis'>56m-个人空间-精致奢华</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="foot-btn">
+                <button class="mui-btn mui-btn-negative mui-btn-outlined" style="width: 70%">约 我</button>
+            </div>
 
         </div>
     </div>
