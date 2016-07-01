@@ -17,7 +17,7 @@ class ConsultantController extends Controller
     public function index()
     {
         //
-        return view('consultant.login',['theme' => 'default']);
+        return view('consultant.main',['theme' => 'default']);
     }
 
     /**

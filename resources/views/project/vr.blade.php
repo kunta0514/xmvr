@@ -53,7 +53,7 @@ function init() {
     controls.connect();
 
     window.addEventListener( 'resize', onWindowResize, false );
-
+    window.addEventListener( 'orientationchange', onWindowResize, false );
 }
 
 // Render loop
@@ -129,13 +129,13 @@ function generateCubeMap( folderName, tileWidth ) {
 }
 
 function onWindowResize() {
-
+	
     camera.aspect = window.innerWidth / window.innerHeight;
 
     camera.updateProjectionMatrix();
 
     renderer.setSize( window.innerWidth, window.innerHeight );
-
+    
 }
 
 init();

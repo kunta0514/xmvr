@@ -1,0 +1,217 @@
+body{
+	background-color: #f7f7f7;
+	font-family: "微软雅黑";
+}
+.mui-bar-nav-top{
+	background-color: #de3031;
+	height: 60px;
+}
+.mui-content-middle{
+	margin-top: 60px;
+}
+.mui-bar-content{
+	position: absolute;
+	line-height: 60px;
+	vertical-align: middle;
+	width: 100%;
+}
+.mui-bar-top-logo{
+	color: #FFFFFF;
+	font-size: 18px;
+}
+.mui-bar-top-search{
+	background: url(../imgs/home/home_search.png) no-repeat center center;
+	background-size: 90% 80%;
+	height: 60px;
+	padding: 0 13% 0 9%;
+}
+.mui-input-search{
+	width: 100%;
+	border-width: 0px;
+}
+.mui-table-view-footprint{
+	height: 60px;
+	padding: 0 5px;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+	background-color: #fff;
+}
+.mui-table-view-footprint li{
+	float: left;
+	line-height: 60px;
+	color: #868686;
+	margin-left: 8px;
+}
+.mui-table-view-footprint li a{
+		color: #868686;
+		cursor: pointer;
+}
+.mui-footprint{
+	
+}
+.mui-selficon-footprint{
+	width: 25px;
+	height: 30px;
+	background: url(../imgs/home/home_footprint.gif) no-repeat;
+	background-size: contain;
+	margin-top: 16px;
+}
+.mui-card-cover{
+	border-width: 0;
+	margin: 0 0;
+}
+.mui-grid-view.mui-grid-9{
+	border-width: 0;
+	background-color: #FFFFFF;
+}
+.mui-col-sm-p2{
+	width: 20%;
+}
+.mui-grid-view.mui-grid-9 .mui-table-view-cell{
+	border-width: 0;
+	padding: 0;
+}
+.mui-icon-function{
+	width: 50px ;
+	height: 50px;	
+}
+.mui-icon-buynewhouse{
+	background: url(../imgs/home/home_function_buynewhouse.gif) no-repeat center center;
+	background-size: cover;
+}
+.mui-icon-secondhouse{
+	background: url(../imgs/home/home_function_secondhouse.gif) no-repeat center center;
+	background-size: cover;
+}
+.mui-icon-findrenthouse{
+	background: url(../imgs/home/home_function_findrenthouse.gif) no-repeat center center;
+	background-size: cover;
+}
+.mui-icon-renovation{
+	background: url(../imgs/home/home_function_renovation.gif) no-repeat center center;
+	background-size: cover;
+}
+.mui-icon-zy{
+	background: url(../imgs/home/home_function_zy.gif) no-repeat center center;
+	background-size: cover;
+}
+
+.mui-icon-checkprice{
+	background: url(../imgs/home/home_function_checkprices.gif) no-repeat center center;
+	background-size: cover;
+}
+.mui-icon-realhouse{
+	background: url(../imgs/home/home_function_realhouse.gif) no-repeat center center;
+	background-size: cover;
+}
+.mui-icon-helprent{
+	background: url(../imgs/home/home_function_helprent.gif) no-repeat center center;
+	background-size: cover;
+}
+.mui-icon-schoolhouse{
+	background: url(../imgs/home/home_function_schoolhouse.gif) no-repeat center center;
+	background-size: cover;
+}
+.mui-icon-morefunc{
+	background: url(../imgs/home/home_function_more.gif) no-repeat center center;
+	background-size: cover;
+}
+.mui-card {
+	font-family: "微软雅黑";
+}
+.mui-table-view-buyhouseguide{
+	position: relative;
+	height: 60px;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+	background-color: #fff;
+}
+.mui-table-view-buyhouseguide li{
+	float: left;
+	line-height: 60px;
+	color: #333333;
+	margin-left: 5px;
+}
+.mui-table-view-buyhouseguide li a{
+		color: #333333;
+}
+.mui-selficon-buyhouseguide{
+	width: 85px;
+	height: 40px;
+	background: url(../imgs/home/home_buyhouseguide.gif) no-repeat;
+	background-size: contain;
+	margin-top: 18px;
+	margin-left: 10px !important
+}
+.mui-selficon-shoppingguide{
+	width: 30px;
+	height: 25px;
+	background: url(../imgs/home/home_shoppingguide.gif) no-repeat;
+	background-size: contain;
+	margin-top: 20px;
+}
+.mui-news-left{
+	text-align: left;
+}
+.mui-news-left .mui-media-body{
+	color: #868686;
+}
+.mui-table-view .mui-news-left .mui-media-object{
+	line-height: 22px;
+}
+.mui-icon-qiang{
+	width: 50px;
+	height: 50px;
+	background: url(../imgs/home/home_qiang.gif) no-repeat;
+	background-size: contain;
+}
+.mui-icon-shui{
+	width: 70px;
+	height: 70px;
+	background: url(../imgs/home/home_shui.gif) no-repeat;
+	background-size: contain;
+	margin-top: 10px;
+}
+.mui-icon-qiang2{
+	width: 50px;
+	height: 50px;
+	background: url(../imgs/home/home_qiang2.gif) no-repeat;
+	background-size: contain;
+}
+.mui-icon-wa{
+	width: 70px;
+	height: 70px;
+	background: url(../imgs/home/home_wa.gif) no-repeat;
+	background-size: contain;
+	margin-top: 10px;
+}
+.section_news .mui-media-body{
+	color:#707070 !important;
+}
+.mui-icon-guesslike{
+	width: 30px;
+	height: 30px;
+	background: url(../imgs/home/home_gusesslike.gif) no-repeat;
+	background-size: contain;
+	margin: 10px 0;
+}
+.mui-content-like{
+	margin: 13px 3px;
+	color:#707070 ;
+}
+.mui-selfcontent-title{
+	font-size: 15px;
+	font-size: 14px;
+}
+.mui-selfcontent{
+	color:#707070 ;
+	font-size: 12px;
+}
+.mui-money{
+	color:#ca3129;
+	font-size: 16px;
+}

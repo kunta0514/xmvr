@@ -20,6 +20,17 @@ class UserController extends Controller
     }
 
     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function login()
+    {
+        //
+        return view('user.login',['theme' => 'default']);
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
