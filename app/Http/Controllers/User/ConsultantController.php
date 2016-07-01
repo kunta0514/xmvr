@@ -28,7 +28,7 @@ class ConsultantController extends Controller
     public function analysis()
     {
         //
-        return view('consultant.analysis',['theme' => 'default']);
+        return view('consultant.chart',['theme' => 'default']);
     }
 
     /**
