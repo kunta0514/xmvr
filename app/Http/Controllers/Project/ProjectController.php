@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Project;
 
 use Illuminate\Http\Request;
 use App\Model\Project;
+use App\Model\Consultant;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -22,8 +23,11 @@ class Projectcontroller extends Controller
             $project = Project::find(2);
         }
 
-
-        return view('Project.project',['project'=> $project]);
+//        echo 'oooooo';
+        $consultants = Consultant::where('id','>',0)->get();
+//        $consultants = null;
+//        print_r($consultants);
+        return view('Project.project',['project'=> $project,'consultants'=>$consultants]);
     }
 
     public function default_page() {

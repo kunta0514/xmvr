@@ -15,7 +15,8 @@ class ProjectSeeder extends Seeder
         //
         $projectList=[
                 'name'=>'北大资源山水年华',
-                'price'=>-1,
+                'nick_name'=> '山水年华',
+                'price'=>8990,
                 'score'=>3.8,
                 'comment_count'=>900,
                 'tag'=>'花园洋房,南北通透,中环以外,普通住宅,中环以外',
@@ -32,6 +33,7 @@ class ProjectSeeder extends Seeder
 
         Project::create([
             'name' => $projectList['name'].str_random(4),
+            'nick_name'=> $projectList['nick_name'],
             'price' => $projectList['price'],
             'score' => $projectList['score'],
             'comment_count' => $projectList['comment_count'],

@@ -20,7 +20,7 @@
             color:#7096bd;
         }
         .bottom-border{
-            background:url(vendor/project/img/xian.png);
+            background:url(/vendor/project/img/xian.png);
             background-position-y:bottom;
             background-repeat:repeat-x
         }
@@ -30,7 +30,7 @@
             width: 20px;
             height: 20px;
             margin-right: 6px;
-            background: url(vendor/project/img/tel-icons.png) no-repeat;
+            background: url(/vendor/project/img/tel-icons.png) no-repeat;
             background-size: 60px auto;
             vertical-align: -5px;
         }
@@ -40,7 +40,7 @@
             width: 30px;
             height: 30px;
             margin-right: 6px;
-            background: url(vendor/project/img/tel-icons2.png) no-repeat;
+            background: url(/vendor/project/img/tel-icons2.png) no-repeat;
             background-size: 60px auto;
             vertical-align: -5px;
         }
@@ -89,7 +89,7 @@
         </div>
 
         <div class="app-section"  style="font-size:16px;color:#dd2f30;font-weight: 600;">
-          均价{{$project->price}}元/平 <img src ="{{asset('vendor/project/img/icon-jsq2.png')}}" width="20px">
+          均价{{$project->price}}元/平 <a href="http://m.fang.com/tools/" target="_self"><img src ="{{asset('vendor/project/img/icon-jsq2.png')}}" width="20px" border="0"></a>
         </div>
 
         <div class="app-section" >
@@ -160,7 +160,7 @@
         </div>
 
         <div class="app-section project-more  bottom-border"  style=" height:30px;">
-            查看更多信息↑
+            查看更多信息↓
         </div>
 
         <div class="app-section" style="position:relative;padding-bottom:10px;">
@@ -186,87 +186,31 @@
         <div class="app-section">
             职业顾问
         </div>
-        <div class="app-section" style="position:relative;">
+        @foreach($consultants as $consultant)
+        <div class="app-section " style="position:relative;" >
                 <div style="width:25%; float:left;position:relative;">
-                    <img  src ="{{asset('vendor/project/img/user_1.png')}}" width="50px" >
+                    <img  src ="{{asset('/vendor/project/img/user_1.png')}}" width="50px" >
                 </div>
-                <div style="width:45%; float:left;position:relative;line-height:25px; margin:0px;padding:0px;">
-                    <span style="font-size:14px;">潘惠</span> <span style="color:orange;font-size:14px;">&nbsp;好评率 66.67%</span><br/>
-                     <span style="color:#949494">带看122人 &nbsp; 成交25套</span>
+                <div class="consultantList" style="width:45%; float:left;position:relative;line-height:25px; margin:0px;padding:0px;"  data-id="{{$consultant->id}}" >
+                    <span style="font-size:14px;">{{$consultant->name}}</span> <span style="color:orange;font-size:14px;">&nbsp;好评率 {{$consultant->good_rate}}%</span><br/>
+                     <span style="color:#949494">带看{{$consultant->people_count}}人 &nbsp; 成交{{$consultant->deal_count}}套</span>
                 </div>
                 <div style="width:30%; float:left;position:relative;text-align:center;">
-                    <a class="tel2-i" href="tel:10086"></a>
+                    <a class="tel2-i" href="tel:{{$consultant->tel}}"></a>
                     <i class="tel2-i send-message"  style="background-position: -30px 0;"></i>
                 </div>
             <div style="clear:both;"></div>
         </div>
+        @endforeach
 
-        <div class="app-section" style="position:relative;">
-            <div style="width:25%; float:left;position:relative;">
-                <img  src ="{{asset('vendor/project/img/user_1.png')}}" width="50px" >
-            </div>
-            <div style="width:45%; float:left;position:relative;line-height:25px; margin:0px;padding:0px;">
-                <span style="font-size:14px;">潘惠</span> <span style="color:orange;font-size:14px;">&nbsp;好评率 66.67%</span><br/>
-                <span style="color:#949494">带看122人 &nbsp; 成交25套</span>
-            </div>
-            <div style="width:30%; float:left;position:relative;text-align:center;">
-                <a class="tel2-i" href="tel:10086"></a>
-                <i class="tel2-i send-message"  style="background-position: -30px 0;"></i>
-            </div>
-            <div style="clear:both;"></div>
-        </div>
 
-        <div class="app-section" style="position:relative;">
-            <div style="width:25%; float:left;position:relative;">
-                <img  src ="{{asset('vendor/project/img/user_1.png')}}" width="50px" >
-            </div>
-            <div style="width:45%; float:left;position:relative;line-height:25px; margin:0px;padding:0px;">
-                <span style="font-size:14px;">潘惠</span> <span style="color:orange;font-size:14px;">&nbsp;好评率 66.67%</span><br/>
-                <span style="color:#949494">带看122人 &nbsp; 成交25套</span>
-            </div>
-            <div style="width:30%; float:left;position:relative;text-align:center;">
-                <a class="tel2-i" href="tel:10086"></a>
-                <i class="tel2-i send-message"  style="background-position: -30px 0;"></i>
-            </div>
-            <div style="clear:both;"></div>
-        </div>
-
-        <div class="app-section" style="position:relative;">
-            <div style="width:25%; float:left;position:relative;">
-                <img  src ="{{asset('vendor/project/img/user_1.png')}}" width="50px" >
-            </div>
-            <div style="width:45%; float:left;position:relative;line-height:25px; margin:0px;padding:0px;">
-                <span style="font-size:14px;">潘惠</span> <span style="color:orange;font-size:14px;">&nbsp;好评率 66.67%</span><br/>
-                <span style="color:#949494">带看122人 &nbsp; 成交25套</span>
-            </div>
-            <div style="width:30%; float:left;position:relative;text-align:center;">
-                <a class="tel2-i" href="tel:10086"></a>
-                <i class="tel2-i send-message"  style="background-position: -30px 0;"></i>
-            </div>
-            <div style="clear:both;"></div>
-        </div>
-
-        <div class="app-section" style="position:relative;">
-            <div style="width:25%; float:left;position:relative;">
-                <img  src ="{{asset('vendor/project/img/user_1.png')}}" width="50px" >
-            </div>
-            <div style="width:45%; float:left;position:relative;line-height:25px; margin:0px;padding:0px;">
-                <span style="font-size:14px;">潘惠</span> <span style="color:orange;font-size:14px;">&nbsp;好评率 66.67%</span><br/>
-                <span style="color:#949494">带看122人 &nbsp; 成交25套</span>
-            </div>
-            <div style="width:30%; float:left;position:relative;text-align:center;">
-                <a class="tel2-i" href="tel:10086"></a>
-                <i class="tel2-i send-message"  style="background-position: -30px 0;"></i>
-            </div>
-            <div style="clear:both;"></div>
-        </div>
 
         <div  style="background-color:#f0f0f0; height:44px;">&nbsp;</div>
 
-        <div class="app-bottompbar" >
+        <div class="app-bottompbar" style="background-color:#dd2f30;">
 
             <div class="app-button-tel red" style="width:33%; margin-right:1px;background-color:#dd2f30">
-                <i class="tel-i"></i><a href="tel:10086" style="color:#fff;">打电话</a>
+                <i class="tel-i"></i><a href="tel:{{$consultants[0]->tel}}" style="color:#fff;">打电话</a>
             </div>
 
              <div class="app-button red send-message"  style="width:33%;margin-right:1px;">
@@ -412,15 +356,16 @@
         $(page).find('.project-more')
                 .on('click', function () {
                    $(page).find(".can-hide").toggleClass("project-hide");
-                    if($(this).text()=="收起↓"){
-                        $(this).text("查看更多信息↑");
+                    if($(this).text()=="收起↑"){
+                        $(this).text("查看更多信息↓");
                     }else{
-                        $(this).text("收起↓");
+                        $(this).text("收起↑");
                     }
                 });
 
         $(page).find('.send-message')
-                .on('click', function () {
+                .on('click', function (e) {
+
                     App.load('message')
                 });
 
@@ -429,6 +374,12 @@
                     self.location="/project/vrglasses/1";
                 });
 
+        $(page).find('.consultantList')
+                .on('click', function (c) {
+
+                    var id= $(c).data("id");
+                    self.location="/user/consultant";
+                });
 
     });
 
