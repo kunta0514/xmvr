@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Project;
 
 use Illuminate\Http\Request;
-
+use App\Model\Project;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -15,16 +15,25 @@ class Projectcontroller extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $row1 = ["name"=>"张三","age"=>"18"];
-        $row2 = ["name"=>"李四","age"=>"19"];
-        $row3 = ["name"=>"王五","age"=>"17"];
 
-        $rows = array($row1,$row2,$row3);
+        if(isset($id) == true){
+            $project = Project::find(2);
+        }else{
+            $project = Project::find(2);
+        }
 
-        $pageparam = ['body'=>'body内容就是666','title'=>'title标题就是666','rows'=> $rows];
-        return view('Project.project',compact('pageparam'));
+
+        return view('Project.project',['project'=> $project]);
     }
 
+    public function default_page() {
+
+
+        $project = Project::find(2);
+
+
+        return view('Project.project',['project'=> $project]);
+    }
     /**
      * Show the form for creating a new resource.
      *

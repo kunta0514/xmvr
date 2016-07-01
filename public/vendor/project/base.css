@@ -91,8 +91,8 @@ body {
     width: 100%;
     background-color: #f9f9f9;
     color: #dd2f30;
-    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.15);
-    box-shadow: inset 0 0 1px rgba(0,0,0,0.15);
+    -webkit-box-shadow: inset 0 -10px 10px rgba(0,0,0,0.15);
+    box-shadow: inset 0 -10px 10px rgba(0,0,0,0.15);
 }
 .app-android .app-topbar {
     height: 44px;
@@ -228,7 +228,7 @@ body {
 
 /* Buttons */
 
-.app-content .app-button {
+.app-bottompbar .app-button ,.app-bottompbar .app-button-tel , .app-content .app-button {
     margin: 0 auto;
     height: 40px;
     border-bottom: 1px solid #AAA;
@@ -245,8 +245,16 @@ body {
 .app-content .app-button.green {
     background-color: #7F7;
 }
-.app-content .app-button.red {
-    background-color: #F77;
+.app-bottompbar .app-button.red ,.app-bottompbar .app-button-tel.red ,.app-content .app-button.red {
+    background-color: #dd2f30;
+}
+
+.app-content .app-button.redborder {
+    background-color: #fff;
+    border:1px solid #dd2f30;
+    color:#dd2f30;
+    height:30px;
+    line-height:30px;
 }
 .app-content .app-button.blue {
     background-color: #77F;

@@ -1,7 +1,12 @@
 @extends('templates.project')
 @section('content')
     <style>
-
+        body{
+            font-family: Arial, "Microsoft Yahei" !important;
+        }
+        a{
+            text-decoration:none;
+        }
         .app-section {
             padding-bottom: 0px;
             padding-top:0px;
@@ -19,30 +24,72 @@
             background-position-y:bottom;
             background-repeat:repeat-x
         }
+
+        .tel-i{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 6px;
+            background: url(vendor/project/img/tel-icons.png) no-repeat;
+            background-size: 60px auto;
+            vertical-align: -5px;
+        }
+
+        .tel2-i{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin-right: 6px;
+            background: url(vendor/project/img/tel-icons2.png) no-repeat;
+            background-size: 60px auto;
+            vertical-align: -5px;
+        }
+        .app-bottompbar .app-button , .app-bottompbar .app-button-tel{
+            height:44px;
+            line-height:44px;
+            font-size:14px;
+            float:left;
+            color:#fff;
+        }
+
+        .button-msg{
+            margin-left: 15px;
+            padding: 5px;
+            line-height: 23px;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            font-size: 14px;
+            background-color: #fff;
+            border: 0;
+        }
+
     </style>
 <div class="app-page" data-page="project">
     <div class="app-topbar">
         <div class="left app-button" data-back data-autotitle></div>
-        <div class="app-title"><span><img src ="{{asset('vendor/project/img/loupan_title.png')}}"></span> <span><img src ="{{asset('vendor/project/img/kanfang_title2.png')}}"></span></div>
+        <div class="app-title"><span><img src ="{{asset('vendor/project/img/loupan_title.png')}}"></span>
+            <span id="title_kanfang"><img src ="{{asset('vendor/project/img/kanfang_title2.png')}}"></span>
+        </div>
         <div class="right app-button menu"><img src ="{{asset('vendor/project/img/right.png')}}"></div>
     </div>
 
-    <div class="app-content" >
+    <div class="app-content" style="margin-bottom: 44px;">
         <div class="app-section" style="text-align:center;">
             <img src ="{{asset('vendor/project/img/project01.jpg')}}" width="300">
         </div>
         <div class="app-section" style="font-size:14px;font-weight:600;color:#000;position:relative;">
-            <div style="width:50%;">中建汤逊湖一号高层</div>
+            <div style="width:50%;">{{$project->name}}</div>
             <div style="position: absolute;float:right;right:10px;top:0px;z-index: 1000" class="kanfangtuan">
                 <img src ="{{asset('vendor/project/img/kanfangtuan.png')}}">
             </div>
         </div>
         <div class="app-section bottom-border" style="color:#665;height:20px;  ">
-            别名：水岸公馆
+            别名：{{$project->nike_name}}
         </div>
 
         <div class="app-section"  style="font-size:16px;color:#dd2f30;font-weight: 600;">
-          均价7500元/平 <img src ="{{asset('vendor/project/img/daikuan.png')}}">
+          均价{{$project->price}}元/平 <img src ="{{asset('vendor/project/img/icon-jsq2.png')}}" width="20px">
         </div>
 
         <div class="app-section" >
@@ -50,14 +97,14 @@
         </div>
 
         <div class="app-section" >
-           地址：青山区二七大桥与和平大道交汇处（二七大桥南岸）
+           地址：{{$project->address}}
         </div>
 
         <div class="app-section">
-            开盘：2016年1月9日三期已第一次加推（在售）
+            开盘：{{$project->opening_comment}}
         </div>
         <div class="app-section">
-            交房：预计2017年10月30日三期2、5号楼交房
+            交房：{{$project->ending_comment}}
         </div>
 
         <div class="app-section can-hide project-hide">
@@ -127,23 +174,152 @@
             预约看房可享以下优惠
         </div>
         <div class="app-section " style="line-height:25px;">
-            房屋折扣：明源顾问带着5千享95折<br/>
+            房屋折扣：明源顾问带着{{$project->discount_comment}}<br/>
             专属顾问服务：买房Q群：88888888
         </div>
         <div class="app-section">
-            <div class="app-button red" style="width:60%;font-size:16px;">预约看房</div>
+            <div class="app-button redborder" style="width:60%;font-size:16px;">预约看房</div>
         </div>
 
         <div  style="background-color:#f0f0f0; height:10px;"></div>
 
+        <div class="app-section">
+            职业顾问
+        </div>
+        <div class="app-section" style="position:relative;">
+                <div style="width:25%; float:left;position:relative;">
+                    <img  src ="{{asset('vendor/project/img/user_1.png')}}" width="50px" >
+                </div>
+                <div style="width:45%; float:left;position:relative;line-height:25px; margin:0px;padding:0px;">
+                    <span style="font-size:14px;">潘惠</span> <span style="color:orange;font-size:14px;">&nbsp;好评率 66.67%</span><br/>
+                     <span style="color:#949494">带看122人 &nbsp; 成交25套</span>
+                </div>
+                <div style="width:30%; float:left;position:relative;text-align:center;">
+                    <a class="tel2-i" href="tel:10086"></a>
+                    <i class="tel2-i send-message"  style="background-position: -30px 0;"></i>
+                </div>
+            <div style="clear:both;"></div>
+        </div>
 
-        <div></div>
-    </div>
+        <div class="app-section" style="position:relative;">
+            <div style="width:25%; float:left;position:relative;">
+                <img  src ="{{asset('vendor/project/img/user_1.png')}}" width="50px" >
+            </div>
+            <div style="width:45%; float:left;position:relative;line-height:25px; margin:0px;padding:0px;">
+                <span style="font-size:14px;">潘惠</span> <span style="color:orange;font-size:14px;">&nbsp;好评率 66.67%</span><br/>
+                <span style="color:#949494">带看122人 &nbsp; 成交25套</span>
+            </div>
+            <div style="width:30%; float:left;position:relative;text-align:center;">
+                <a class="tel2-i" href="tel:10086"></a>
+                <i class="tel2-i send-message"  style="background-position: -30px 0;"></i>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
 
-    <div class="app-bottompbar">
+        <div class="app-section" style="position:relative;">
+            <div style="width:25%; float:left;position:relative;">
+                <img  src ="{{asset('vendor/project/img/user_1.png')}}" width="50px" >
+            </div>
+            <div style="width:45%; float:left;position:relative;line-height:25px; margin:0px;padding:0px;">
+                <span style="font-size:14px;">潘惠</span> <span style="color:orange;font-size:14px;">&nbsp;好评率 66.67%</span><br/>
+                <span style="color:#949494">带看122人 &nbsp; 成交25套</span>
+            </div>
+            <div style="width:30%; float:left;position:relative;text-align:center;">
+                <a class="tel2-i" href="tel:10086"></a>
+                <i class="tel2-i send-message"  style="background-position: -30px 0;"></i>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
 
+        <div class="app-section" style="position:relative;">
+            <div style="width:25%; float:left;position:relative;">
+                <img  src ="{{asset('vendor/project/img/user_1.png')}}" width="50px" >
+            </div>
+            <div style="width:45%; float:left;position:relative;line-height:25px; margin:0px;padding:0px;">
+                <span style="font-size:14px;">潘惠</span> <span style="color:orange;font-size:14px;">&nbsp;好评率 66.67%</span><br/>
+                <span style="color:#949494">带看122人 &nbsp; 成交25套</span>
+            </div>
+            <div style="width:30%; float:left;position:relative;text-align:center;">
+                <a class="tel2-i" href="tel:10086"></a>
+                <i class="tel2-i send-message"  style="background-position: -30px 0;"></i>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+
+        <div class="app-section" style="position:relative;">
+            <div style="width:25%; float:left;position:relative;">
+                <img  src ="{{asset('vendor/project/img/user_1.png')}}" width="50px" >
+            </div>
+            <div style="width:45%; float:left;position:relative;line-height:25px; margin:0px;padding:0px;">
+                <span style="font-size:14px;">潘惠</span> <span style="color:orange;font-size:14px;">&nbsp;好评率 66.67%</span><br/>
+                <span style="color:#949494">带看122人 &nbsp; 成交25套</span>
+            </div>
+            <div style="width:30%; float:left;position:relative;text-align:center;">
+                <a class="tel2-i" href="tel:10086"></a>
+                <i class="tel2-i send-message"  style="background-position: -30px 0;"></i>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+
+        <div  style="background-color:#f0f0f0; height:44px;">&nbsp;</div>
+
+        <div class="app-bottompbar" >
+
+            <div class="app-button-tel red" style="width:33%; margin-right:1px;background-color:#dd2f30">
+                <i class="tel-i"></i><a href="tel:10086" style="color:#fff;">打电话</a>
+            </div>
+
+             <div class="app-button red send-message"  style="width:33%;margin-right:1px;">
+                 <i class="tel-i" style="background-position: -20px 0;"></i>在线咨询
+             </div>
+
+             <div class="app-button red" style="min-width:33%;max-width:34%;">
+                 <i class="tel-i"  style="background-position: -40px 0;"></i>预约看房
+             </div>
+
+        </div>
     </div>
 </div>
+
+    <div class="app-page" data-page="message">
+        <div class="app-topbar">
+            <div class="left app-button" data-back data-autotitle></div>
+            <div class="app-title">张三（在线）</div>
+
+        </div>
+
+        <p class="app-section" style="width:60%;float:left;border-radius: 10px; background-color:#fff;">
+            张三：2.05元/平方米.月
+        </p>
+
+        <p class="app-section"  style="width:60%;float:right;border-radius: 10px;background-color:#b2e966;text-align:right;">
+            2.05元/平方米.月：您
+        </p>
+
+        <p class="app-section" style="width:60%;float:left;border-radius: 10px; background-color:#fff;">
+            张三：2.05元/平方米.月
+        </p>
+
+        <p class="app-section" style="width:60%;float:left;border-radius: 10px; background-color:#fff;">
+            张三：2.05元/平方米.月
+        </p>
+
+        <p class="app-section"  style="width:60%;float:right;border-radius: 10px;background-color:#b2e966;text-align:right;">
+            2.05元/平方米.月：您
+        </p>
+
+        <div class="app-bottompbar" >
+
+            <div class="app-button-tel red"  style="width:70%;">
+               <input type="text" class="button-msg" style="width:80%">
+            </div>
+
+            <div class="app-button red" style="width:30%;">
+                <i class="tel-i"  style="background-position: -20px 0;"></i>发送
+            </div>
+
+        </div>
+    </div>
 
     <div id="jiangjiatongzhi" style="display:none;">
         <div style="font-size:10px;color:#000;margin-bottom:10px;">降价消息会通过短信及手机推送消息通知您</div>
@@ -176,28 +352,22 @@
 
 
 
+
 <script>
     App.controller('project', function (page) {
-
-
         this.onShow = function () {
             //alert("回退");
         };
-
         this.onHide = function () {
             //alert("回退");
         };
-
         this.onBack = function () {
-
             //alert("回退");
         };
-
         this.onForward = function () {
             //alert("回退");
         };
-
-
+        //菜单更多点击
         $(page).find('.menu')
                 .on('click', function () {
                     App.dialog({
@@ -210,6 +380,7 @@
                     });
                 });
 
+        //看房团点击
         $(page).find('.kanfangtuan')
                 .on('click', function () {
                     App.dialog({
@@ -222,8 +393,7 @@
                     });
                 });
 
-
-
+        //降价通知点击
         $(page).find('.jiangjiatongzhi-img')
                 .on('click', function () {
                     App.dialog({
@@ -236,6 +406,7 @@
                     });
                 });
 
+        //看房通知点击
         $(page).find('.kaipantongzhi-img')
                 .on('click', function () {
                     App.dialog({
@@ -248,6 +419,7 @@
                     });
                 });
 
+        //收缩 项目详情
         $(page).find('.project-more')
                 .on('click', function () {
                    $(page).find(".can-hide").toggleClass("project-hide");
@@ -257,9 +429,38 @@
                         $(this).text("收起↓");
                     }
                 });
+
+        $(page).find('.send-message')
+                .on('click', function () {
+                    App.load('message')
+                });
+
+        $(page).find('#title_kanfang')
+                .on('click', function () {
+                    self.location="/project/vrglasses/1";
+                });
+
+
     });
 
+    App.controller('message', function (page) {
+
+        this.onShow = function () {
+            //alert("回退");
+        };
+        this.onHide = function () {
+            //alert("回退");
+        };
+        this.onBack = function () {
+
+            //alert("回退");
+        };
+        this.onForward = function () {
+            //alert("回退");
+        };
+    });
     try {
+        document.title = "<?=$project->name?>";
         App.restore();
     } catch (err) {
         App.load('project');

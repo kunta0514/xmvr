@@ -7,7 +7,7 @@
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
     <meta name="kik-transparent-statusbar" content="true">
 
-    <title>Project</title>
+    <title>项目名称</title>
 
     <link href="{{asset('vendor/project/app.css')}}" rel="stylesheet">
     <link href="{{asset('vendor/project/base.css')}}" rel="stylesheet">
