@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 
+use App\Model\Consultant;
+
 class ConsultantSeeder extends Seeder
 {
     /**
@@ -22,7 +24,7 @@ class ConsultantSeeder extends Seeder
             'deal_count'=>87,
             'people_count'=>300,
         ];
-        DB::table('project')->truncate();
+//        DB::table('consultant')->truncate();
 
         Consultant::create([
             'name' => $consultantList['name'],
