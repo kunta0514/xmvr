@@ -126,7 +126,7 @@
                 <table>
                     <tr>
                         <td>
-                        	<a href="/user/consultant/analysis">
+                        	<a href="/user/consultant/chart">
 	                            <span>26</span>
 	                            <div>今日浏览</div>
                             </a>
