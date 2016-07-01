@@ -19,6 +19,17 @@ class ConsultantController extends Controller
         //
         return view('consultant.main',['theme' => 'default']);
     }
+	
+	/**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function analysis()
+    {
+        //
+        return view('consultant.analysis',['theme' => 'default']);
+    }
 
     /**
      * Show the form for creating a new resource.
