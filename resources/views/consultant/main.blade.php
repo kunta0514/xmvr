@@ -66,8 +66,20 @@
         }
 
         .foot-btn{
-            margin-top: 10px;
+            padding: 10px 0;
+            background: #fff;
         }
+        .foot-btn:after {
+		    position: absolute;
+		    right: 0;
+		    bottom: 0;
+		    left: 15px;
+		    height: 1px;
+		    content: '';
+		    -webkit-transform: scaleY(.5);
+		    transform: scaleY(.5);
+		    background-color: #c8c7cc;
+		}
         .mui-media-body{
             text-align: left;
             font-size: smaller;
@@ -80,6 +92,9 @@
             border-radius:3px;
         }
 
+        .round {
+	       border-radius: 50%;
+        }
     </style>
     <div class="mui-content">
         <div class="mui-content-padded" style="margin: 5px;text-align: center;">
@@ -87,7 +102,7 @@
                 <table>
                     <tr>
                         <td width="25%">
-                            <img src="#">
+                            <img class="round" src="{{asset('img/user/sunny.png')}}" alt="" />
                         </td>
                         <td>
                             <div class="title">
@@ -138,8 +153,8 @@
                             </div>
                         </li>
                         <li class="mui-table-view-cell mui-media">
-                            <a href="#">
-                                <img class="mui-media-object mui-pull-left" src="http://dcloudio.github.io/mui/assets/img/shuijiao.jpg">
+                            <a href="/project/vrglasses/">
+                                <img class="mui-media-object mui-pull-left" src="{{asset('img/room/1.jpg')}}">
                                 <div class="mui-media-body">
                                     1号楼-3室2厅
                                     <p class='mui-ellipsis'>132m-舒适三房-广阔空间</p>
@@ -147,8 +162,8 @@
                             </a>
                         </li>
                         <li class="mui-table-view-cell mui-media">
-                            <a href="#">
-                                <img class="mui-media-object mui-pull-left" src="http://dcloudio.github.io/mui/assets/img/muwu.jpg">
+                            <a href="/project/vrglasses/">
+                                <img class="mui-media-object mui-pull-left" src="{{asset('img/room/2.jpg')}}">
                                 <div class="mui-media-body">
                                     1号楼-2室2厅
                                     <p class='mui-ellipsis'>102m-三口之家-舒适温馨</p>
@@ -156,8 +171,8 @@
                             </a>
                         </li>
                         <li class="mui-table-view-cell mui-media">
-                            <a href="#">
-                                <img class="mui-media-object mui-pull-left" src="http://dcloudio.github.io/mui/assets/img/cbd.jpg">
+                            <a href="/project/vrglasses/">
+                                <img class="mui-media-object mui-pull-left" src="{{asset('img/room/1.jpg')}}">
                                 <div class="mui-media-body">
                                     1号楼-2室1厅
                                     <p class='mui-ellipsis'>96m-高性价比-投资首选</p>
@@ -165,8 +180,8 @@
                             </a>
                         </li>
                         <li class="mui-table-view-cell mui-media">
-                            <a href="#">
-                                <img class="mui-media-object mui-pull-left" src="http://dcloudio.github.io/mui/assets/img/yuantiao.jpg">
+                            <a href="/project/vrglasses/">
+                                <img class="mui-media-object mui-pull-left" src="{{asset('img/room/2.jpg')}}">
                                 <div class="mui-media-body">
                                     1号楼-1室1厅
                                     <p class='mui-ellipsis'>56m-个人空间-精致奢华</p>

@@ -145,7 +145,10 @@ html, body {
 	})();
 	
     $(function(){
-    	
+    	/*var noSleep = new NoSleep();
+    	noSleep.enable();*/
+    	//横屏
+    	//screen.orientation.lock("landscape-primary");
     });
 
 </script>
