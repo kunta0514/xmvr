@@ -80,9 +80,9 @@ class Projectcontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function vrglasses()
+    public function vrglasses($id)
     {
-        return view("project.vrglasses", []);
+        return view("project.vrglasses", ['id' => 'dahudi']);
     }
     
     /**
