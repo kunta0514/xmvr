@@ -6,13 +6,13 @@
     <body>
     <header class="mui-bar mui-bar-nav mui-bar-nav-top" >
         <div class="mui-row mui-bar-content" >
-            <div class="mui-col-sm-2 mui-bar-top-logo">
+            <div class="mui-col-xs-3 mui-bar-top-logo">
                 小明VR
             </div>
-            <div class="mui-col-sm-9 mui-bar-top-search">
+            <div class="mui-col-xs-8 mui-bar-top-search">
                 <input class="mui-input-search" />
             </div>
-            <div class="mui-col-sm-1">
+            <div class="mui-col-xs-1">
             </div>
         </div>
 
@@ -116,56 +116,45 @@
                 <li class="mui-selficon-buyhouseguide"></li>
                 <li class="mui-selficon-shoppingguide"></li>
                 <li><a>宜居天堂</a></li>
-                <li><a>改善型湖景房等你来挑</a></li>
             </ul>
         </section>
         <section class="section_news">
-            <ul class="mui-table-view mui-grid-view">
-                <li class="mui-table-view-cell mui-media mui-col-xs-4">
-                    <a href="#" class="mui-news-left">
-                        <div class="mui-media-object">7.2买房团</div>
-                        <div class="mui-media-body">一元抢房别错过</div>
-                    </a>
-                </li>
-                <li class="mui-table-view-cell mui-media mui-col-xs-6">
-                    <a href="#">
-                        <div class="mui-row">
-                            <div class="mui-col-sm-4 mui-icon-qiang"></div>
-                            <div class="mui-col-sm-8 mui-news-left" style="padding-left: 15px;" >
-                                <div class="mui-media-object">江汉刚需两房</div>
-                                <div class="mui-media-body">满两年无税超省</div>
-                            </div>
+            <div class="mui-row" >
+                <div class="mui-col-xs-4 mui-padding-top-left-10" >
+                    <div class="mui-media-object">7.2买房团</div>
+                    <div class="mui-media-body">一元抢房别错过</div>
+                </div>
+                <div class="mui-col-xs-6 mui-padding-top-left-10">
+                    <div class="mui-row">
+                        <div class="mui-col-xs-4 mui-icon-qiang"></div>
+                        <div class="mui-col-xs-8 mui-news-left" style="padding-left: 15px;" >
+                            <div class="mui-media-object">江汉刚需两房</div>
+                            <div class="mui-media-body">满两年无税超省</div>
                         </div>
-                    </a>
-                </li>
-                <li class="mui-table-view-cell mui-media mui-col-xs-2">
-                    <a href="#" class="mui-news-left">
-                        <div class="mui-icon-shui"></div>
-                    </a>
-                </li>
-                <li class="mui-table-view-cell mui-media mui-col-xs-4">
-                    <a href="#" class="mui-news-left">
-                        <div class="mui-media-object">租房降价来袭</div>
-                        <div class="mui-media-body">还在公园旁</div>
-                    </a>
-                </li>
-                <li class="mui-table-view-cell mui-media mui-col-xs-6">
-                    <a href="#">
-                        <div class="mui-row">
-                            <div class="mui-col-sm-4 mui-icon-qiang2"></div>
-                            <div class="mui-col-sm-8 mui-news-left" style="padding-left: 15px;">
-                                <div class="mui-media-object">武汉跳楼价</div>
-                                <div class="mui-media-body">抢免费精准报价</div>
-                            </div>
+                    </div>
+                </div>
+                <div class="mui-col-xs-2">
+                    <div class="mui-icon-shui"></div>
+                </div>
+                <div class="mui-col-xs-4 mui-padding-top-left-10" >
+                    <div class="mui-media-object">租房降价来袭</div>
+                    <div class="mui-media-body">还在公园旁</div>
+                </div>
+                <div class="mui-col-xs-6 mui-padding-top-left-10">
+                    <div class="mui-row">
+                        <div class="mui-col-xs-4 mui-icon-qiang2"></div>
+                        <div class="mui-col-xs-8 mui-news-left" style="padding-left: 15px;" >
+                            <div class="mui-media-object">武汉跳楼价</div>
+                            <div class="mui-media-body">抢免费精准报价</div>
                         </div>
-                    </a>
-                </li>
-                <li class="mui-table-view-cell mui-media mui-col-xs-2">
-                    <a href="#" class="mui-news-left">
-                        <div class="mui-icon-wa"></div>
-                    </a>
-                </li>
-            </ul>
+                    </div>
+                </div>
+                <div class="mui-col-xs-2">
+                    <div class="mui-icon-wa"></div>
+                </div>
+            </div>
+
+
         </section>
         <section class="section_like">
             <div class="mui-row">
@@ -186,22 +175,19 @@
                 <li class="mui-table-view-cell mui-media">
                     <a href="#">
                         <div class="mui-row">
-                            <div class="mui-col-sm-3">
+                            <div class="mui-col-xs-4">
                                 <img width="100%" height="80px"  src="{{asset('vendor/imgs/advertisement/lunbo_03.jpg')}}">
                             </div>
-                            <div class="mui-col-sm-9" style="padding-left: 10px;">
+                            <div class="mui-col-xs-8" style="padding-left: 10px;">
                                 <div class="mui-selfcontent-title">远洋心汉口</div>
                                 <div class="mui-row mui-selfcontent">
-                                    <div class="mui-col-sm-2">3.9分</div>
-                                    <div class="mui-col-sm-3">95条评论</div>
-                                    <div class="mui-col-sm-4"></div>
-                                    <div class="mui-col-sm-3 mui-money">14000元/平</div>
+                                    <div class="mui-col-xs-2">3.9分</div>
+                                    <div class="mui-col-xs-3">95条评论</div>
+                                    <div class="mui-col-xs-7 mui-money">15000元/平</div>
                                 </div>
                                 <div class="mui-selfcontent">
                                     <span>东湖高新区-光谷南</span>
                                     <span>湖景地产</span>
-                                    <span>板楼</span>
-                                    <span>中环以外</span>
                                 </div>
                                 <div class="mui-selfcontent">
                                     <span>报名可享优惠</span>
@@ -213,22 +199,20 @@
                 <li class="mui-table-view-cell mui-media">
                     <a href="#">
                         <div class="mui-row">
-                            <div class="mui-col-sm-3">
-                                <img width="100%" height="80px"  src="{{asset('vendor/imgs/advertisement/lunbo_04.jpg')}}">
+                            <div class="mui-col-xs-4">
+                                <img   width="100%" height="80px"  src="{{asset('vendor/imgs/advertisement/lunbo_04.jpg')}}">
                             </div>
-                            <div class="mui-col-sm-9" style="padding-left: 10px;">
-                                <div  class="mui-selfcontent-title">远洋心汉口</div>
+                            <div class="mui-col-xs-8" style="padding-left: 10px;">
+                                <div  class="mui-selfcontent-title">远洋心汉口1</div>
                                 <div class="mui-row mui-selfcontent">
-                                    <div class="mui-col-sm-2">3.9分</div>
-                                    <div class="mui-col-sm-3">95条评论</div>
-                                    <div class="mui-col-sm-4"></div>
-                                    <div class="mui-col-sm-3 mui-money">14000元/平</div>
+                                    <div class="mui-col-xs-2">3.9分</div>
+                                    <div class="mui-col-xs-3">95条评论</div>
+                                    <div class="mui-col-xs-7 mui-money">14000元/平</div>
                                 </div>
                                 <div class="mui-selfcontent">
-                                    <span>东湖高新区-光谷南</span>
-                                    <span>湖景地产</span>
                                     <span>板楼</span>
                                     <span>中环以外</span>
+                                    <span>品牌地产</span>
                                 </div>
                                 <div class="mui-selfcontent">
                                     <span>报名可享优惠</span>
