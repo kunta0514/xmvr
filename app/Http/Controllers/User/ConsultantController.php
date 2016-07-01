@@ -1,28 +1,23 @@
 <?php
 
-namespace App\Http\Controllers\Project;
+namespace App\Http\Controllers\User;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class Projectcontroller extends Controller
+class ConsultantController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() {
-        $row1 = ["name"=>"张三","age"=>"18"];
-        $row2 = ["name"=>"李四","age"=>"19"];
-        $row3 = ["name"=>"王五","age"=>"17"];
-
-        $rows = array($row1,$row2,$row3);
-
-        $pageparam = ['body'=>'body内容就是666','title'=>'title标题就是666','rows'=> $rows];
-        return view('Project.project',compact('pageparam'));
+    public function index()
+    {
+        //
+        return view('consultant.login',['theme' => 'default']);
     }
 
     /**
@@ -78,28 +73,6 @@ class Projectcontroller extends Controller
     public function update(Request $request, $id)
     {
         //
-    }
-    
-    /**
-     * Display the VR view.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function vrglasses()
-    {
-        return view("project.vrglasses", []);
-    }
-    
-    /**
-     * Display the VR view.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function vr($id)
-    {
-        return view("project.vr", ['id' => $id]);
     }
 
     /**

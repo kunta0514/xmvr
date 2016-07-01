@@ -45,10 +45,10 @@
                         {{--<td>{{$item->ekp_latest_name}}</td>--}}
                         {{--<td>--}}
                             {{--@foreach($item->Details as $k=>$detail)--}}
-                                {{--<li style="list-style: none;line-height: 21px">[{{$k+1}}]. 版本: {{$detail['workflow_version']}}  <font style="font-size: 12px;color: rgb(201, 201, 221)">[{{$detail['erp_version']}}]</font></li>--}}
+                                {{--<li style="list-style: none;line-height: 21px">[{{$k+1}}]. 版本: {{$detail['workflow_version']}}  <fonts style="fonts-size: 12px;color: rgb(201, 201, 221)">[{{$detail['erp_version']}}]</fonts></li>--}}
                             {{--@endforeach--}}
                         {{--</td>--}}
-                        {{--<td>2016年6月18日 <font color="red">升级</font></td>--}}
+                        {{--<td>2016年6月18日 <fonts color="red">升级</fonts></td>--}}
                         {{--<td>104</td>--}}
                         {{--<td>客户版本使用情况，移动审批服务版本</td>--}}
                     {{--</tr>--}}
