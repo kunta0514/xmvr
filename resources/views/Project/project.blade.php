@@ -71,7 +71,7 @@
         <div class="app-title"><span><img src ="{{asset('vendor/project/img/loupan_title.png')}}"></span>
             <span id="title_kanfang"><img src ="{{asset('vendor/project/img/kanfang_title2.png')}}"></span>
         </div>
-        <div class="right app-button menu"><img src ="{{asset('vendor/project/img/right.png')}}"></div>
+        <div class="right app-button menu send-message"><img src ="{{asset('vendor/project/img/right.png')}}"></div>
     </div>
 
     <div class="app-content" style="margin-bottom: 44px;">
@@ -367,18 +367,7 @@
         this.onForward = function () {
             //alert("回退");
         };
-        //菜单更多点击
-        $(page).find('.menu')
-                .on('click', function () {
-                    App.dialog({
-                        title        : '留下联系方式',
-                        text         : '留下联系方式',
-                        okButton     : '确认',
-                        cancelButton : '取消'
-                    }, function (choice) {
-                        console.log(choice);
-                    });
-                });
+
 
         //看房团点击
         $(page).find('.kanfangtuan')
