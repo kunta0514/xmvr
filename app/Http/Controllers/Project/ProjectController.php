@@ -73,6 +73,28 @@ class Projectcontroller extends Controller
     {
         //
     }
+    
+    /**
+     * Display the VR view.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function vrglasses()
+    {
+        return view("project.vrglasses", []);
+    }
+    
+    /**
+     * Display the VR view.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function vr($id)
+    {
+        return view("project.vr", ['id' => $id]);
+    }
 
     /**
      * Remove the specified resource from storage.
