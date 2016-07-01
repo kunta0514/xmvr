@@ -25,9 +25,10 @@ Route::group(['prefix' => 'project', 'namespace' => 'Project'], function()
 
 Route::group(['prefix' => 'home', 'namespace' => 'Home'], function()
 {
-    Route::resource('home', 'Home@index');
+    Route::resource('home', 'HomeController@index');
     //get、post等按顺序，按分组些，不能穿插写
-    Route::get('/', 'Home@index');
+    Route::get('/', 'HomeController@index');
+    Route::get('/back', 'BackController@index');
 
 });
 
@@ -36,5 +37,4 @@ Route::group(['prefix' => 'user', 'namespace' => 'User'], function()
     Route::resource('user', 'User@index');
     //get、post等按顺序，按分组些，不能穿插写
     Route::get('/', 'User@index');
-
 });
