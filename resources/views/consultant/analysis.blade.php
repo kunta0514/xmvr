@@ -1,4 +1,5 @@
-@extends('mobiletemplates.default') @section('content')
+@extends('mobiletemplates.default') 
+@section('content')
 <style>
 	#chart {
 		padding: 10px;
@@ -24,6 +25,9 @@
 	    position: inherit !important;
 	    margin: 0 !important;
 	    overflow: visible !important;
+	    line-height: 0 !important;
+	    text-align: center;
+	    padding: 9px !important;
 	}	
 </style>
 <script src="{{asset('vendor/echarts/echarts.min.js')}}"></script>
@@ -47,46 +51,45 @@
                         <div class="mui-switch-handle"></div>
                     </div>
                 </li>
-                <li class="mui-table-view-cell mui-media">
-                    <a href="/project/vrglasses/dahudi">
-                        <img class="mui-media-object mui-pull-left" src="{{asset('img/room/1.jpg')}}">
-                        <div class="mui-media-body">
-                            18627176816
-                            <p class='mui-ellipsis'>15 次</p>
-                        </div>
-                        <a class="tel"><span class="mui-icon mui-icon-phone"></span></a>
-                    </a>
+                <li class="mui-table-view-cell mui-media mui-hidden">
+                    <img class="mui-media-object mui-pull-left" src="{{asset('img/room/1.jpg')}}">
+                	<a class="mui-media-object mui-pull-right tel" href="tel:18627176817">
+                		<span class="mui-icon mui-icon-phone"></span>
+            		</a>
+                    <div class="mui-media-body">
+                        18627176817
+                        <p class='mui-ellipsis'>15 次</p>
+                    </div>
                 </li>
                 <li class="mui-table-view-cell mui-media">
-                    <a href="/project/vrglasses/dahudi">
-                        <img class="mui-media-object mui-pull-left" src="{{asset('img/room/2.jpg')}}">
-                        <a class="mui-media-object mui-pull-right tel"><span class="mui-icon mui-icon-phone"></span></a>
-                        <div class="mui-media-body">
-                            13371353842
-                            <p class='mui-ellipsis'>8 次</p>
-                        </div>
-
-                    </a>
+                    <img class="mui-media-object mui-pull-left" src="{{asset('img/room/2.jpg')}}" />
+                    <a class="mui-media-object mui-pull-right tel" href="tel:13371353842">
+                    	<span class="mui-icon mui-icon-phone"></span>
+                	</a>
+                    <div class="mui-media-body">
+                        13371353842
+                        <p class='mui-ellipsis'>8 次</p>
+                    </div>
                 </li>
                 <li class="mui-table-view-cell mui-media">
-                    <a href="/project/vrglasses/dahudi">
-                        <img class="mui-media-object mui-pull-left" src="{{asset('img/room/1.jpg')}}">
-                        <div class="mui-media-body">
-                            18951330204
-                            <p class='mui-ellipsis'>3 次</p>
-                        </div>
-                        <a class="tel"><span class="mui-icon mui-icon-phone"></span></a>
-                    </a>
+                    <img class="mui-media-object mui-pull-left" src="{{asset('img/room/1.jpg')}}">
+                    <a class="mui-media-object mui-pull-right tel" href="tel:18627176817">
+                		<span class="mui-icon mui-icon-phone"></span>
+            		</a>
+                    <div class="mui-media-body">
+                        18951330204
+                        <p class='mui-ellipsis'>3 次</p>
+                    </div>
                 </li>
                 <li class="mui-table-view-cell mui-media">
-                    <a href="/project/vrglasses/dahudi">
-                        <img class="mui-media-object mui-pull-left" src="{{asset('img/room/2.jpg')}}">
-                        <div class="mui-media-body">
-                            15012345678
-                            <p class='mui-ellipsis'>3 次</p>
-                        </div>
-                        <a class="tel"><span class="mui-icon mui-icon-phone"></span></a>
-                    </a>
+                    <img class="mui-media-object mui-pull-left" src="{{asset('img/room/2.jpg')}}">
+                    <a class="mui-media-object mui-pull-right tel" href="tel:18627176817">
+                		<span class="mui-icon mui-icon-phone"></span>
+            		</a>
+                    <div class="mui-media-body">
+                        15012345678
+                        <p class='mui-ellipsis'>3 次</p>
+                    </div>
                 </li>
             </ul>
         </div>
