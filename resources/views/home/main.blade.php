@@ -255,7 +255,7 @@
                 <span class="mui-icon mui-icon-videocam"></span>
                 <span class="mui-tab-label">看房</span>
             </a>
-            <a class="mui-tab-item" href=">
+            <a class="mui-tab-item" href="">
                 <span class="mui-icon mui-icon-person"></span>
                 <span class="mui-tab-label">我的</span>
             </a>
