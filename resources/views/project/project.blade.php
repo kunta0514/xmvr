@@ -207,7 +207,7 @@
             专属顾问服务：买房Q群：88888888
         </div>
         <div class="app-section">
-            <div class="app-button redborder" style="width:60%;font-size:16px;">预约看房</div>
+            <div class="app-button redborder qukanfang-btn" style="width:60%;font-size:16px;">预约看房</div>
         </div>
 
         <div  style="background-color:#f0f0f0; height:10px;"></div>
@@ -246,7 +246,7 @@
                  <i class="tel-i" style="background-position: -20px 0;"></i>在线咨询
              </div>
 
-             <div class="app-button red" style="min-width:33%;max-width:34%;">
+             <div class="app-button red qukanfang-btn" style="min-width:33%;max-width:34%;">
                  <i class="tel-i"  style="background-position: -40px 0;"></i>预约看房
              </div>
 
@@ -303,6 +303,11 @@
 
     <div id="kaipantongzhi" style="display:none;">
         <div style="font-size:10px;color:#000;margin-bottom:10px;">开盘消息会通过短信及手机推送消息通知您</div>
+        <div style="color:#000;"><span>手机号</span><input type="text" style="width:150px;"></div>
+    </div>
+
+    <div id="qukanfang" style="display:none;">
+        <div style="font-size:10px;color:#000;margin-bottom:10px;">看房请留下您的联系方式</div>
         <div style="color:#000;"><span>手机号</span><input type="text" style="width:150px;"></div>
     </div>
 
@@ -378,6 +383,19 @@
                     App.dialog({
                         title        : '开盘通知',
                         rawText         :$("#kaipantongzhi").html(),
+                        okButton     : '确认',
+                        cancelButton : '取消'
+                    }, function (choice) {
+                        console.log(choice);
+                    });
+                });
+
+        //看房通
+        $(page).find('.qukanfang-btn')
+                .on('click', function () {
+                    App.dialog({
+                        title        : '预约看房',
+                        rawText         :$("#qukanfang").html(),
                         okButton     : '确认',
                         cancelButton : '取消'
                     }, function (choice) {

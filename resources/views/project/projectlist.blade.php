@@ -28,7 +28,7 @@
             </div>
             <div class="content">
                 <div class="mui-bar-top-search">
-                    <!--input class="mui-input-search" /-->
+                    <input class="mui-input-search" />
                 </div>
             </div>
         </div>
