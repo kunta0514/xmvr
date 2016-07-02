@@ -28,7 +28,7 @@
             </div>
             <div class="content">
                 <div class="mui-bar-top-search">
-                    <input class="mui-input-search" />
+                    <input class="mui-input-search" style="width:90%;height:25px;"/>
                 </div>
             </div>
         </div>
@@ -149,6 +149,13 @@
     </section>
 
 
-
+<script type="text/javascript">
+    $(".mui-bar-top-search").on('click',function(){
+        var str=$(this).find('input').val();
+        if(str!=''){
+            self.location = '/projectlist/'+escape(str)
+        }
+    });
+</script>
     </body>
 @stop
