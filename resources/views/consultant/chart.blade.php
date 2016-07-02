@@ -29,6 +29,22 @@
 	    text-align: center;
 	    padding: 9px !important;
 	}	
+	
+	.consultant-video a.mui-title {
+		width: 100%;
+		margin: 0 !important;
+	}
+	.consultant-video .head {
+        text-align: left;
+        padding-left: 15px;
+        font-size: smaller;
+        width: 100%;
+        background: #fff;
+    }
+    
+    .consultant-video .list {
+    	padding-top: 44px;
+    }
 </style>
 <script src="{{asset('vendor/echarts/echarts.min.js')}}"></script>
 <script src="{{asset('vendor/echarts/vintage.js')}}"></script>
@@ -44,7 +60,7 @@
         <div class="head">
         	我的访客
         </div>
-        <div>
+        <div class="list">
             <ul class="mui-table-view">
                 <li class="mui-table-view-cell mui-hidden">cared
                     <div id="M_Toggle" class="mui-switch mui-active">
