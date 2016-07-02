@@ -193,7 +193,7 @@
                     <a href="#">
                         <div class="mui-row">
                             <div class="mui-col-xs-4">
-                                <img width="100%" height="80px"  src="{{asset('vendor/imgs/advertisement/lunbo_03.jpg')}}">
+                                <img width="100%" height="86px"  src="{{asset('vendor/imgs/advertisement/lunbo_03.jpg')}}">
                             </div>
                             <div class="mui-col-xs-8" style="padding-left: 10px;">
                                 <div class="mui-selfcontent-title">远洋心汉口</div>
@@ -206,8 +206,12 @@
                                     <span>东湖高新区-光谷南</span>
                                     <span>湖景地产</span>
                                 </div>
-                                <div class="mui-selfcontent">
-                                    <span>报名可享优惠</span>
+                                <div class="mui-selfcontent mui-margin-top-3" >
+								<span class="mui-keyword-discount">
+									<span>小明VR红包</span>
+									<span>￥200</span>
+								</span>
+                                    <span class="mui-keyword mui-margin-left-5">总价减4万</span>
                                 </div>
                             </div>
                         </div>
@@ -217,10 +221,10 @@
                     <a href="#">
                         <div class="mui-row">
                             <div class="mui-col-xs-4">
-                                <img   width="100%" height="80px"  src="{{asset('vendor/imgs/advertisement/lunbo_04.jpg')}}">
+                                <img   width="100%" height="86px"  src="{{asset('vendor/imgs/advertisement/lunbo_04.jpg')}}">
                             </div>
                             <div class="mui-col-xs-8" style="padding-left: 10px;">
-                                <div  class="mui-selfcontent-title">远洋心汉口1</div>
+                                <div  class="mui-selfcontent-title">保利时代</div>
                                 <div class="mui-row mui-selfcontent">
                                     <div class="mui-col-xs-2">3.9分</div>
                                     <div class="mui-col-xs-3">95条评论</div>
@@ -231,8 +235,36 @@
                                     <span>中环以外</span>
                                     <span>品牌地产</span>
                                 </div>
+                                <div class="mui-selfcontent mui-margin-top-3" >
+                                    <span class="mui-keyword">报名可享优惠</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media">
+                    <a href="#">
+                        <div class="mui-row">
+                            <div class="mui-col-xs-4">
+                                <img width="100%" height="86px"  src="{{asset('vendor/imgs/advertisement/lunbo_05.jpg')}}">
+                            </div>
+                            <div class="mui-col-xs-8" style="padding-left: 10px;">
+                                <div class="mui-selfcontent-title">万科红郡</div>
+                                <div class="mui-row mui-selfcontent">
+                                    <div class="mui-col-xs-2">3.9分</div>
+                                    <div class="mui-col-xs-3">95条评论</div>
+                                    <div class="mui-col-xs-7 mui-money">12000元/平</div>
+                                </div>
                                 <div class="mui-selfcontent">
-                                    <span>报名可享优惠</span>
+                                    <span>东湖高新区-光谷南</span>
+                                    <span>湖景地产</span>
+                                </div>
+                                <div class="mui-selfcontent mui-margin-top-3" >
+								<span class="mui-keyword-discount">
+									<span>小明VR红包</span>
+									<span>￥5000</span>
+								</span>
+                                    <span class="mui-keyword mui-margin-left-5">5千抵三万</span>
                                 </div>
                             </div>
                         </div>
