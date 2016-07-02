@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Model\Project;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Cache;
+use App\Model\Consultant;
 
 class ConsultantController extends Controller
 {
@@ -52,8 +51,6 @@ class ConsultantController extends Controller
     public function store(Request $request)
     {
         //
-        $request->projectid;
-        $request->consultantid;
 
     }
 
@@ -66,6 +63,9 @@ class ConsultantController extends Controller
     public function show($id)
     {
         //
+        $consultant = Consultant::find($id);
+
+        return view('consultant.show',['theme' => 'default','consultant' => $consultant]);
     }
 
     /**

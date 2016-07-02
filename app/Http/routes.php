@@ -51,4 +51,5 @@ Route::group(['prefix' => 'user', 'namespace' => 'User'], function()
     Route::get('/login', 'UserController@index');
     Route::get('/consultant', 'ConsultantController@index');
     Route::get('/consultant/chart', 'ConsultantController@analysis');
+    Route::get('/consultant/{id}', 'ConsultantController@show');
 });
