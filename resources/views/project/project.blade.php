@@ -426,7 +426,7 @@
 
                     this_consultant.id = $(this).data('id');
                     this_consultant.name = $(this).data('name');
-                    
+
                     self.location="/user/show/"+id;
                 });
 
