@@ -48,6 +48,17 @@ class Projectcontroller extends Controller
 
         return view('project.projectlist',['projects'=> $projects]);
     }
+
+    public function getliststr($str) {
+
+//        echo 'ffffff';
+//
+        $projects = Project::where('id','>',0)->where('name','like','%'.$str.'%')->get();
+
+
+
+        return view('project.projectlist',['projects'=> $projects]);
+    }
     /**
      * Show the form for creating a new resource.
      *
