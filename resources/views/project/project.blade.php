@@ -96,7 +96,8 @@
 
     <div class="app-content" style="margin-bottom: 44px;">
         <div class="app-section" style="text-align:center;" >
-            <img src ="{{asset('vendor/project/img/project01.jpg')}}" width="300">
+            <img src ="{{asset('vendor/imgs/advertisement/')}}/{{$project->img}}" width="300">
+
         </div>
         <div class="app-section" style="font-size:14px;font-weight:600;color:#000;position:relative;">
             <div style="width:50%;">{{$project->name}}</div>

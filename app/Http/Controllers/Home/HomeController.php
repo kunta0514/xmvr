@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Home;
 
 use Illuminate\Http\Request;
-
+use App\Model\Project;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -16,8 +16,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //
-        return view('home.main');
+        $projects = Project::where('id','>',0)->get();
+        return view('home.main',['projects'=>$projects]);
     }
 
     /**
