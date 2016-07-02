@@ -226,3 +226,32 @@ body{
 .mui-padding-top-left-10{
 	padding: 10px 0 0 10px;
 }
+.mui-margin-top-3{
+	margin-top: 3px;
+}
+.mui-margin-left-5{
+	margin-left: 5px;
+}
+.mui-keyword{
+	border: 1px solid  #707070;
+	padding: 0 4px;
+	background-color: #fefefe;
+	border-radius: 2px;
+}
+.mui-keyword-discount{
+	border: 1px solid  #c9805f;
+	border-radius: 2px;
+}
+.mui-keyword-discount span:first-child{
+	background-color: #f9692c;
+	color: #FFFFFF;
+	padding: 0 4px;
+
+}
+.mui-keyword-discount span:last-child{
+	background-color: #FFFFFF;
+	color: #f9692c;
+	text-align: center;
+	padding-right: 2px;
+
+}
