@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Model\Consultant;
 
 class ConsultantController extends Controller
 {
@@ -50,6 +51,7 @@ class ConsultantController extends Controller
     public function store(Request $request)
     {
         //
+
     }
 
     /**
@@ -61,6 +63,9 @@ class ConsultantController extends Controller
     public function show($id)
     {
         //
+        $consultant = Consultant::find($id);
+
+        return view('consultant.show',['theme' => 'default','consultant' => $consultant]);
     }
 
     /**
