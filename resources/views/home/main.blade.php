@@ -1,22 +1,22 @@
 @extends('mobiletemplates.default')
 @section('content')
-	<style>
-		.line {
-		    box-sizing:border-box;
-		    position:relative;
-    		display: block;
-			overflow: hidden;
-			white-space: nowrap;
-    		text-overflow: ellipsis;
-		}
-		.line .left {
-			float: left;
-		    margin-right: 10px;
-		}
-		.line .content {
-			display: block;
-		}
-	</style>
+    <style>
+        .line {
+            box-sizing:border-box;
+            position:relative;
+            display: block;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .line .left {
+            float: left;
+            margin-right: 10px;
+        }
+        .line .content {
+            display: block;
+        }
+    </style>
     <script type="text/javascript" charset="utf-8">
         mui.init();
     </script>
@@ -27,8 +27,8 @@
                 小明VR
             </div>
             <div class="content">
-            	<div class="mui-bar-top-search">
-                	<!--input class="mui-input-search" /-->
+                <div class="mui-bar-top-search">
+                    <!--input class="mui-input-search" /-->
                 </div>
             </div>
         </div>
@@ -189,87 +189,37 @@
                         <div class="mui-switch-handle"></div>
                     </div>
                 </li>
-                <li class="mui-table-view-cell mui-media">
-                    <a href="#">
-                        <div class="mui-row">
-                            <div class="mui-col-xs-4">
-                                <img width="100%" height="86px"  src="{{asset('vendor/imgs/advertisement/lunbo_03.jpg')}}">
-                            </div>
-                            <div class="mui-col-xs-8" style="padding-left: 10px;">
-                                <div class="mui-selfcontent-title">远洋心汉口</div>
-                                <div class="mui-row mui-selfcontent">
-                                    <div class="mui-col-xs-2">3.9分</div>
-                                    <div class="mui-col-xs-3">95条评论</div>
-                                    <div class="mui-col-xs-7 mui-money">15000元/平</div>
+                @foreach($projects as $project)
+                    <li class="mui-table-view-cell mui-media">
+                        <a href="/project/{{$project->id}}">
+                            <div class="mui-row">
+                                <div class="mui-col-xs-4">
+                                    <img width="100%" height="86px"  src="{{asset('vendor/imgs/advertisement/')}}/{{$project->img}}">
                                 </div>
-                                <div class="mui-selfcontent">
-                                    <span>东湖高新区-光谷南</span>
-                                    <span>湖景地产</span>
-                                </div>
-                                <div class="mui-selfcontent mui-margin-top-3" >
+                                <div class="mui-col-xs-8" style="padding-left: 10px;">
+                                    <div class="mui-selfcontent-title">{{$project->name}}</div>
+                                    <div class="mui-row mui-selfcontent">
+                                        <div class="mui-col-xs-2">{{$project->score}}分</div>
+                                        <div class="mui-col-xs-3">{{$project->comment_count}}条评论</div>
+                                        <div class="mui-col-xs-7 mui-money">{{$project->price}}元/平</div>
+                                    </div>
+                                    <div class="mui-selfcontent">
+                                        <span>{{$project->area}}</span>
+
+                                    </div>
+                                    <div class="mui-selfcontent mui-margin-top-3" >
 								<span class="mui-keyword-discount">
 									<span>小明VR红包</span>
-									<span>￥200</span>
+									<span>￥{{$project->red_packets}}</span>
 								</span>
-                                    <span class="mui-keyword mui-margin-left-5">总价减4万</span>
+                                        <span class="mui-keyword mui-margin-left-5">{{$project->discount_comment}}</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="mui-table-view-cell mui-media">
-                    <a href="#">
-                        <div class="mui-row">
-                            <div class="mui-col-xs-4">
-                                <img   width="100%" height="86px"  src="{{asset('vendor/imgs/advertisement/lunbo_04.jpg')}}">
-                            </div>
-                            <div class="mui-col-xs-8" style="padding-left: 10px;">
-                                <div  class="mui-selfcontent-title">保利时代</div>
-                                <div class="mui-row mui-selfcontent">
-                                    <div class="mui-col-xs-2">3.9分</div>
-                                    <div class="mui-col-xs-3">95条评论</div>
-                                    <div class="mui-col-xs-7 mui-money">14000元/平</div>
-                                </div>
-                                <div class="mui-selfcontent">
-                                    <span>板楼</span>
-                                    <span>中环以外</span>
-                                    <span>品牌地产</span>
-                                </div>
-                                <div class="mui-selfcontent mui-margin-top-3" >
-                                    <span class="mui-keyword">报名可享优惠</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="mui-table-view-cell mui-media">
-                    <a href="#">
-                        <div class="mui-row">
-                            <div class="mui-col-xs-4">
-                                <img width="100%" height="86px"  src="{{asset('vendor/imgs/advertisement/lunbo_05.jpg')}}">
-                            </div>
-                            <div class="mui-col-xs-8" style="padding-left: 10px;">
-                                <div class="mui-selfcontent-title">万科红郡</div>
-                                <div class="mui-row mui-selfcontent">
-                                    <div class="mui-col-xs-2">3.9分</div>
-                                    <div class="mui-col-xs-3">95条评论</div>
-                                    <div class="mui-col-xs-7 mui-money">12000元/平</div>
-                                </div>
-                                <div class="mui-selfcontent">
-                                    <span>东湖高新区-光谷南</span>
-                                    <span>湖景地产</span>
-                                </div>
-                                <div class="mui-selfcontent mui-margin-top-3" >
-								<span class="mui-keyword-discount">
-									<span>小明VR红包</span>
-									<span>￥5000</span>
-								</span>
-                                    <span class="mui-keyword mui-margin-left-5">5千抵三万</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
+                        </a>
+                    </li>
+                @endforeach
+
             </ul>
 
         </section>
@@ -283,11 +233,11 @@
                 <span class="mui-icon mui-icon-home"></span>
                 <span class="mui-tab-label">首页</span>
             </a>
-            <a class="mui-tab-item" href="">
+            <a class="mui-tab-item" href="/projectlist">
                 <span class="mui-icon mui-icon-videocam"></span>
                 <span class="mui-tab-label">看房</span>
             </a>
-            <a class="mui-tab-item" href="">
+            <a class="mui-tab-item" href="/user">
                 <span class="mui-icon mui-icon-person"></span>
                 <span class="mui-tab-label">我的</span>
             </a>

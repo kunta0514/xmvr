@@ -17,10 +17,12 @@ class CreateProjectTable extends Migration
         {
             $table->increments('id');
             $table->string('name');
+            $table->string('nick_name');
             $table->Integer('price');
             $table->decimal('score',2,1);           //得分
 //            $table->tinyInteger('is_hot');           //是否
             $table->Integer('comment_count');       //评论数
+            $table->string('img')->nullable();          //图
             $table->string('tag')->nullable();              //标签
             $table->string('area')->nullable();             //地区
             $table->string('address')->nullable();         //地址

@@ -26,6 +26,14 @@ Route::group(['prefix' => 'project', 'namespace' => 'Project'], function()
     Route::get('/vr/{id}', 'ProjectController@vr');
 });
 
+Route::group(['prefix' => 'projectlist', 'namespace' => 'Project'], function()
+{
+    Route::resource('projectlist', 'ProjectController@getlist');
+    //get、post等按顺序，按分组些，不能穿插写
+    Route::get('/', 'ProjectController@getlist');
+    Route::get('/{str}', 'ProjectController@getliststr');
+});
+
 Route::group(['prefix' => 'home', 'namespace' => 'Home'], function()
 {
     Route::resource('home', 'HomeController@index');

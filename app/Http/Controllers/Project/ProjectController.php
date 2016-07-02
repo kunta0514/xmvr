@@ -36,7 +36,28 @@ class Projectcontroller extends Controller
         $project = Project::find(2);
 
 
-        return view('Project.project',['project'=> $project]);
+        return view('project.project',['project'=> $project]);
+    }
+
+    public function getlist() {
+
+
+        $projects = Project::where('id','>',0)->get();
+
+
+
+        return view('project.projectlist',['projects'=> $projects]);
+    }
+
+    public function getliststr($str) {
+
+//        echo 'ffffff';
+//
+        $projects = Project::where('id','>',0)->where('name','like','%'.$str.'%')->get();
+
+
+
+        return view('project.projectlist',['projects'=> $projects]);
     }
     /**
      * Show the form for creating a new resource.
