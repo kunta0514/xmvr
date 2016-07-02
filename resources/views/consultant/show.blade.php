@@ -12,10 +12,18 @@
             background-color: white;
         }
 
-        .consultant-card .title {
-            font-size: smaller;
-            text-align: left;
+        .consultant-card table{
+            width: 100%;
         }
+        .consultant-card .title {
+             font-size: smaller;
+             text-align: left;
+         }
+
+        .consultant-card .title .xsmall {
+            font-size: x-small;
+        }
+
         .consultant-card .content {
             font-size:x-small;
             text-align: left;
@@ -106,13 +114,13 @@
                         </td>
                         <td>
                             <div class="title">
-                                <span>朱文静</span> <span class="mui-badge mui-badge-danger">问答专家</span> <span>从业：3年</span>
+                                <span>{{$consultant->name}}</span> <span class="mui-badge mui-badge-danger">{{$consultant->occupational_level}}</span> <span class="xsmall">从业：{{$consultant->occupational_age}}年</span>
                             </div>
                             <div class="content">
-                                <span>销售楼盘：江南新天地 华天明珠紫阳府</span>
+                                <span>{{$consultant->sale_comment}}</span>
                             </div>
                             <div class="content">
-                                <span>已为<span class="red">55</span>人回答房产等问题</span>
+                                <span>已为<span class="red">{{$consultant->answer_count}}</span>人回答房产等问题</span>
                             </div>
                             <div class="content">
                                 <span>用心服务客户。</span>
@@ -127,16 +135,16 @@
                     <tr>
                         <td>
                         	<a href="/user/consultant/chart">
-	                            <span>26</span>
+	                            <span>{{$consultant->deal_count}}</span>
 	                            <div>今日浏览</div>
                             </a>
                         </td>
                         <td>
-                            <span>201人</span>
+                            <span>{{$consultant->people_count}}人</span>
                             <div>最近带看</div>
                         </td>
                         <td>
-                            <span>40%</span>
+                            <span>{{$consultant->good_rate}}%</span>
                             <div>好评率</div>
                         </td>
                     </tr>
