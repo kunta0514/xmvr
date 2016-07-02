@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Model\Project;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Cache;
 
 class ConsultantController extends Controller
 {
@@ -50,6 +52,9 @@ class ConsultantController extends Controller
     public function store(Request $request)
     {
         //
+        $request->projectid;
+        $request->consultantid;
+
     }
 
     /**

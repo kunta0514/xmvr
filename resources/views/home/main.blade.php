@@ -38,10 +38,10 @@
         <section id="advertisement">
             <div class="mui-slider">
                 <div class="mui-slider-group ">
-                    <div class="mui-slider-item"><a href="#"><img src="{{asset('vendor/imgs/advertisement/lunbo_03.jpg')}}" /></a></div>
-                    <div class="mui-slider-item"><a href="#"><img src="{{asset('vendor/imgs/advertisement/lunbo_04.jpg')}}" /></a></div>
-                    <div class="mui-slider-item"><a href="#"><img src="{{asset('vendor/imgs/advertisement/lunbo_05.jpg')}}" /></a></div>
-                    <div class="mui-slider-item"><a href="#"><img src="{{asset('vendor/imgs/advertisement/lunbo_06.jpg')}}" /></a></div>
+                    <div class="mui-slider-item"><a href="/project/1"><img src="{{asset('vendor/imgs/advertisement/lunbo_03.jpg')}}" /></a></div>
+                    <div class="mui-slider-item"><a href="/project/2"><img src="{{asset('vendor/imgs/advertisement/lunbo_04.jpg')}}" /></a></div>
+                    <div class="mui-slider-item"><a href="/project/3"><img src="{{asset('vendor/imgs/advertisement/lunbo_05.jpg')}}" /></a></div>
+                    <div class="mui-slider-item"><a href="/project/4"><img src="{{asset('vendor/imgs/advertisement/lunbo_06.jpg')}}" /></a></div>
                 </div>
                 <div class="mui-slider-indicator">
                     <div class="mui-indicator mui-active"></div>
