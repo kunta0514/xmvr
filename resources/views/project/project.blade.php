@@ -422,12 +422,12 @@
         $(page).find('.consultantList')
                 .on('click', function (c) {
 
-                    var id= $(c).data("id");
+                    var id= $(this).data("id");
 
                     this_consultant.id = $(this).data('id');
                     this_consultant.name = $(this).data('name');
 
-                    self.location="/user/show/"+id;
+                    self.location="/user/consultant/"+id;
                 });
 
         //返回
