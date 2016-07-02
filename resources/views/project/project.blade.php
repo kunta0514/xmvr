@@ -220,13 +220,13 @@
                 <div style="width:20%; float:left;position:relative;">
                     <img  src ="{{asset('/vendor/project/img/user_1.png')}}" width="50px" >
                 </div>
-                <div class="consultantList" style="width:50%; float:left;position:relative;line-height:25px; margin:0px;padding:0px;"  data-id="{{$consultant->id}}" >
+                <div class="consultantList" style="width:50%; float:left;position:relative;line-height:25px; margin:0px;padding:0px;"  data-id="{{$consultant->id}}" data-name="{{$consultant->name}}" >
                     <span style="font-size:14px;">{{$consultant->name}}</span> <span style="color:orange;font-size:14px;">&nbsp;好评率 {{$consultant->good_rate}}%</span><br/>
                      <span style="color:#949494">带看{{$consultant->people_count}}人 &nbsp; 成交{{$consultant->deal_count}}套</span>
                 </div>
                 <div style="width:30%; float:left;position:relative;text-align:center;">
                     <a class="tel2-i" href="tel:{{$consultant->tel}}"></a>
-                    <i class="tel2-i send-message"  style="background-position: -30px 0;"></i>
+                    <i class="tel2-i send-message"  style="background-position: -30px 0;" data-id="{{$consultant->id}}" data-name="{{$consultant->name}}"></i>
                 </div>
             <div style="clear:both;"></div>
         </div>
@@ -296,20 +296,7 @@
         </div>
     </div>
 
-    <div id="jiangjiatongzhi" style="display:none;">
-        <div style="font-size:10px;color:#000;margin-bottom:10px;">降价消息会通过短信及手机推送消息通知您</div>
-        <div style="color:#000;"><span>手机号</span><input type="text" style="width:150px;"></div>
-    </div>
 
-    <div id="kaipantongzhi" style="display:none;">
-        <div style="font-size:10px;color:#000;margin-bottom:10px;">开盘消息会通过短信及手机推送消息通知您</div>
-        <div style="color:#000;"><span>手机号</span><input type="text" style="width:150px;"></div>
-    </div>
-
-    <div id="qukanfang" style="display:none;">
-        <div style="font-size:10px;color:#000;margin-bottom:10px;">看房请留下您的联系方式</div>
-        <div style="color:#000;"><span>手机号</span><input type="text" style="width:150px;"></div>
-    </div>
 
 <script src="{{asset('vendor/project/zepto.min.js')}}"></script>
 
@@ -335,6 +322,7 @@
 
 <script type="text/javascript">
 
+    var this_consultant = {id:'{{$consultants[0]->id}}', name:'{{$consultants[0]->name}}'};
 
     App.controller('project', function (page) {
         this.onShow = function () {
@@ -393,9 +381,11 @@
         //看房通
         $(page).find('.qukanfang-btn')
                 .on('click', function () {
+
+                    var txt = '<div id="qukanfang" style="display:none;"><div style="font-size:10px;color:#000;margin-bottom:10px;">'+this_consultant.name+'：看房请留下您的联系方式</div>    <div style="color:#000;"><span>手机号</span><input type="text" style="width:150px;"></div> </div>'
                     App.dialog({
                         title        : '预约看房',
-                        rawText         :$("#qukanfang").html(),
+                        rawText         :$(txt).html(),
                         okButton     : '确认',
                         cancelButton : '取消'
                     }, function (choice) {
@@ -413,10 +403,13 @@
                         $(this).text("收起↑");
                     }
                 });
-
+        //留言
         $(page).find('.send-message')
                 .on('click', function (c) {
-
+                    if($(this).data('id')!= undefined) {
+                        this_consultant.id = $(this).data('id');
+                        this_consultant.name = $(this).data('name');
+                    }
                     App.load('message')
                 });
 
@@ -425,13 +418,19 @@
                     self.location="/project/vrglasses/1";
                 });
 
+        //打开置业顾问
         $(page).find('.consultantList')
                 .on('click', function (c) {
 
                     var id= $(c).data("id");
-                    self.location="/user/consultant";
+
+                    this_consultant.id = $(this).data('id');
+                    this_consultant.name = $(this).data('name');
+                    
+                    self.location="/user/show/"+id;
                 });
 
+        //返回
         $(page).find('.left')
                 .on('click', function () {
                     window.history.go(-1);
@@ -455,6 +454,7 @@
             //alert("回退");
         };
 
+        $(page).find('.app-title').text('置业顾问：'+this_consultant.name)
 
         $(page).find('.sendmessage')
                 .on('click', function (e) {
@@ -475,4 +475,16 @@
         App.load('project');
     }
 </script>
+
+    <div id="jiangjiatongzhi" style="display:none;">
+        <div style="font-size:10px;color:#000;margin-bottom:10px;">降价消息会通过短信及手机推送消息通知您</div>
+        <div style="color:#000;"><span>手机号</span><input type="text" style="width:150px;"></div>
+    </div>
+
+    <div id="kaipantongzhi" style="display:none;">
+        <div style="font-size:10px;color:#000;margin-bottom:10px;">开盘消息会通过短信及手机推送消息通知您</div>
+        <div style="color:#000;"><span>手机号</span><input type="text" style="width:150px;"></div>
+    </div>
+
+
 @stop
