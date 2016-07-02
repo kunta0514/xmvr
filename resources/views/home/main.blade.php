@@ -1,18 +1,35 @@
 @extends('mobiletemplates.default')
 @section('content')
+	<style>
+		.line {
+		    box-sizing:border-box;
+		    position:relative;
+    		display: block;
+			overflow: hidden;
+			white-space: nowrap;
+    		text-overflow: ellipsis;
+		}
+		.line .left {
+			float: left;
+		    margin-right: 10px;
+		}
+		.line .content {
+			display: block;
+		}
+	</style>
     <script type="text/javascript" charset="utf-8">
         mui.init();
     </script>
     <body>
     <header class="mui-bar mui-bar-nav mui-bar-nav-top" >
-        <div class="mui-row mui-bar-content" >
-            <div class="mui-col-xs-3 mui-bar-top-logo">
+        <div class="mui-row mui-bar-content line" >
+            <div class="mui-bar-top-logo left title">
                 小明VR
             </div>
-            <div class="mui-col-xs-8 mui-bar-top-search">
-                <input class="mui-input-search" />
-            </div>
-            <div class="mui-col-xs-1">
+            <div class="content">
+            	<div class="mui-bar-top-search">
+                	<input class="mui-input-search" />
+                </div>
             </div>
         </div>
 
