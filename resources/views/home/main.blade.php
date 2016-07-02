@@ -28,7 +28,7 @@
             </div>
             <div class="content">
             	<div class="mui-bar-top-search">
-                	<input class="mui-input-search" />
+                	<!--input class="mui-input-search" /-->
                 </div>
             </div>
         </div>
@@ -251,11 +251,11 @@
                 <span class="mui-icon mui-icon-home"></span>
                 <span class="mui-tab-label">首页</span>
             </a>
-            <a class="mui-tab-item ">
+            <a class="mui-tab-item" href="">
                 <span class="mui-icon mui-icon-videocam"></span>
                 <span class="mui-tab-label">看房</span>
             </a>
-            <a class="mui-tab-item ">
+            <a class="mui-tab-item" href=">
                 <span class="mui-icon mui-icon-person"></span>
                 <span class="mui-tab-label">我的</span>
             </a>
