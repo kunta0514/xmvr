@@ -21,19 +21,19 @@
         mui.init();
     </script>
     <body>
-    {{--<header class="mui-bar mui-bar-nav mui-bar-nav-top" >--}}
-        {{--<div class="mui-row mui-bar-content line" >--}}
-            {{--<div class="mui-bar-top-logo left title">--}}
-                {{--小明VR--}}
-            {{--</div>--}}
-            {{--<div class="content">--}}
-                {{--<div class="mui-bar-top-search">--}}
-                    {{--<!--input class="mui-input-search" /-->--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
+    <header class="mui-bar mui-bar-nav mui-bar-nav-top" >
+        <div class="mui-row mui-bar-content line" >
+            <div class="mui-bar-top-logo left title">
+                小明VR
+            </div>
+            <div class="content">
+                <div class="mui-bar-top-search">
+                    <!--input class="mui-input-search" /-->
+                </div>
+            </div>
+        </div>
 
-    {{--</header>--}}
+    </header>
     <section class="mui-content-middle">
         <section id="advertisement">
             <div class="mui-slider">
