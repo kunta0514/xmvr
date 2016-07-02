@@ -114,10 +114,12 @@
 
         <div class="app-section" style="color:#949494;font-size:10px;">
             {{--<img src ="{{asset('vendor/project/img/biaoqian01.png')}}">--}}
-            <span style="border:1px solid #ccc;padding:3px;border-radius: 2px;margin-right:5px;">老盘加推</span>
-            <span style="border:1px solid #ccc;padding:3px;border-radius: 2px;margin-right:5px;">内至二环</span>
-            <span style="border:1px solid #ccc;padding:3px;border-radius: 2px;margin-right:5px;">学区房</span>
-            <span style="border:1px solid #ccc;padding:3px;border-radius: 2px;margin-right:5px;">普通住宅</span>
+
+            @foreach(explode(',',$project->tag)  as $item)
+            <span style="border:1px solid #ccc;padding:3px;border-radius: 2px;margin-right:5px;">{{$item}}</span>
+            @endforeach
+
+
         </div>
 
         <div class="app-section" >
@@ -257,7 +259,7 @@
             <div class="app-title">置业顾问：{{$consultants[0]->name}}</div>
 
         </div>
-
+        <div class="messagebody">
         <p class="app-section" style="width:auto;float:left;border-radius: 10px; background-color:#fff; clear:both;">
            亲，有什么问题，请问哦
         </p>
@@ -278,15 +280,15 @@
 
         <p class="app-section"  style="width:auto;float:right;border-radius: 10px;background-color:#b2e966;text-align:right;clear:both">
             好的，谢谢
-        </p><br/>
-
+        </p>
+        </div>
         <div class="app-bottompbar" >
 
             <div class="app-button-tel red"  style="width:70%;">
                <input type="text" class="button-msg" style="width:80%">
             </div>
 
-            <div class="app-button red" style="width:30%;">
+            <div class="app-button red sendmessage" style="width:30%;">
                 <i class="tel-i"  style="background-position: -20px 0;"></i>发送
             </div>
 
@@ -325,7 +327,9 @@
 
 
 
-<script>
+<script type="text/javascript">
+
+
     App.controller('project', function (page) {
         this.onShow = function () {
             //alert("回退");
@@ -431,6 +435,19 @@
         this.onForward = function () {
             //alert("回退");
         };
+
+
+        $(page).find('.sendmessage')
+                .on('click', function (e) {
+                   var txt = $(this).prev().find("input").val();
+                    $(this).prev().find("input").val('');
+
+                    var str = '<p class="app-section" style="width:auto;float:right;border-radius: 10px; background-color:#b2e966; clear:both;">' + txt + '</p>'
+                    $(".messagebody").append(str);
+                });
+
+
+
     });
     try {
         document.title = "<?=$project->name?>";
