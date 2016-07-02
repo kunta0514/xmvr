@@ -44,6 +44,26 @@
             background-size: 60px auto;
             vertical-align: -5px;
         }
+        .jiangjia-icon {
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            margin-right: 6px;
+            background: url(/vendor/project/img/icon-jj.png) no-repeat;
+            background-size: 22px auto;
+            vertical-align: -5px;
+        }
+
+        .kaipan-icon {
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            margin-right: 6px;
+            background: url(/vendor/project/img/icon-tz.png) no-repeat;
+            background-size: 22px auto;
+            vertical-align: -5px;
+        }
+
         .app-bottompbar .app-button , .app-bottompbar .app-button-tel{
             height:44px;
             line-height:44px;
@@ -75,7 +95,7 @@
     </div>
 
     <div class="app-content" style="margin-bottom: 44px;">
-        <div class="app-section" style="text-align:center;">
+        <div class="app-section" style="text-align:center;" >
             <img src ="{{asset('vendor/project/img/project01.jpg')}}" width="300">
         </div>
         <div class="app-section" style="font-size:14px;font-weight:600;color:#000;position:relative;">
@@ -92,8 +112,12 @@
           均价{{$project->price}}元/平 <a href="http://m.fang.com/tools/" target="_self"><img src ="{{asset('vendor/project/img/icon-jsq2.png')}}" width="20px" border="0"></a>
         </div>
 
-        <div class="app-section" >
-            <img src ="{{asset('vendor/project/img/biaoqian01.png')}}">
+        <div class="app-section" style="color:#949494;font-size:10px;">
+            {{--<img src ="{{asset('vendor/project/img/biaoqian01.png')}}">--}}
+            <span style="border:1px solid #ccc;padding:3px;border-radius: 2px;margin-right:5px;">老盘加推</span>
+            <span style="border:1px solid #ccc;padding:3px;border-radius: 2px;margin-right:5px;">内至二环</span>
+            <span style="border:1px solid #ccc;padding:3px;border-radius: 2px;margin-right:5px;">学区房</span>
+            <span style="border:1px solid #ccc;padding:3px;border-radius: 2px;margin-right:5px;">普通住宅</span>
         </div>
 
         <div class="app-section" >
@@ -163,9 +187,11 @@
             查看更多信息↓
         </div>
 
-        <div class="app-section" style="position:relative;padding-bottom:10px;">
-            <img class="jiangjiatongzhi-img" src ="{{asset('vendor/project/img/jiangjiatongzhiwo.png')}}" style="position:absolute;float:left;top:5px;left:30px;margin:0px;">
-            <img class="kaipantongzhi-img" src ="{{asset('vendor/project/img/kaipantongzhiwo.png')}}"   style="position:absolute;float:right;top:5px;right:30px;margin:0px;">
+        <div class="app-section" style="position:relative;padding-bottom:10px;color:#949494;font-size:14px;font-weight: 600;">
+            {{--<img class="jiangjiatongzhi-img" src ="{{asset('vendor/project/img/jiangjiatongzhiwo.png')}}" style="position:absolute;float:left;top:5px;left:30px;margin:0px;">--}}
+            <div class="jiangjiatongzhi-img" style="width:auto;float:left; padding:0px;margin:0px 30px;"><i class="jiangjia-icon"></i> &nbsp;降价通知</div>
+            <div class="kaipantongzhi-img" style="width:auto;float:right;padding:0px;margin:0px  30px;;"><i class="kaipan-icon"></i> &nbsp;开盘通知</div>
+            {{--<img class="kaipantongzhi-img" src ="{{asset('vendor/project/img/kaipantongzhiwo.png')}}"   style="position:absolute;float:right;top:5px;right:30px;margin:0px;">--}}
         </div>
 
         <div  style="background-color:#f0f0f0; height:10px;"></div>
@@ -174,7 +200,7 @@
             预约看房可享以下优惠
         </div>
         <div class="app-section " style="line-height:25px;">
-            房屋折扣：明源顾问带着{{$project->discount_comment}}<br/>
+            房屋折扣：{{$project->discount_comment}}<br/>
             专属顾问服务：买房Q群：88888888
         </div>
         <div class="app-section">
@@ -184,7 +210,7 @@
         <div  style="background-color:#f0f0f0; height:10px;"></div>
 
         <div class="app-section">
-            职业顾问
+            置业顾问
         </div>
         @foreach($consultants as $consultant)
         <div class="app-section " style="position:relative;" >
@@ -207,7 +233,7 @@
 
         <div  style="background-color:#f0f0f0; height:44px;">&nbsp;</div>
 
-        <div class="app-bottompbar" style="background-color:#dd2f30;">
+        <div class="app-bottompbar" >
 
             <div class="app-button-tel red" style="width:33%; margin-right:1px;background-color:#dd2f30">
                 <i class="tel-i"></i><a href="tel:{{$consultants[0]->tel}}" style="color:#fff;">打电话</a>
@@ -225,32 +251,34 @@
     </div>
 </div>
 
-    <div class="app-page" data-page="message">
+    <div class="app-page" data-page="message" >
         <div class="app-topbar">
             <div class="left app-button" data-back data-autotitle></div>
-            <div class="app-title">张三（在线）</div>
+            <div class="app-title">置业顾问：{{$consultants[0]->name}}</div>
 
         </div>
 
-        <p class="app-section" style="width:60%;float:left;border-radius: 10px; background-color:#fff;">
-            张三：2.05元/平方米.月
+        <p class="app-section" style="width:auto;float:left;border-radius: 10px; background-color:#fff; clear:both;">
+           亲，有什么问题，请问哦
         </p>
 
-        <p class="app-section"  style="width:60%;float:right;border-radius: 10px;background-color:#b2e966;text-align:right;">
-            2.05元/平方米.月：您
+
+        <p class="app-section"  style="width:auto;float:right;border-radius: 10px;background-color:#b2e966;text-align:right; clear:both;">
+            什么时候可以看房
         </p>
 
-        <p class="app-section" style="width:60%;float:left;border-radius: 10px; background-color:#fff;">
-            张三：2.05元/平方米.月
-        </p>
 
-        <p class="app-section" style="width:60%;float:left;border-radius: 10px; background-color:#fff;">
-            张三：2.05元/平方米.月
-        </p>
+        <p class="app-section" style="width:auto;float:left;border-radius: 10px; background-color:#fff; clear:both;">
+            每周1-周6，上午9点到下午4点，可以随时看房哦
+        </p><br/>
 
-        <p class="app-section"  style="width:60%;float:right;border-radius: 10px;background-color:#b2e966;text-align:right;">
-            2.05元/平方米.月：您
-        </p>
+        <p class="app-section" style="width:auto;float:left;border-radius: 10px; background-color:#fff;clear:both">
+            看房前，可电话与我联系
+        </p><br/>
+
+        <p class="app-section"  style="width:auto;float:right;border-radius: 10px;background-color:#b2e966;text-align:right;clear:both">
+            好的，谢谢
+        </p><br/>
 
         <div class="app-bottompbar" >
 
@@ -364,7 +392,7 @@
                 });
 
         $(page).find('.send-message')
-                .on('click', function (e) {
+                .on('click', function (c) {
 
                     App.load('message')
                 });
@@ -379,6 +407,11 @@
 
                     var id= $(c).data("id");
                     self.location="/user/consultant";
+                });
+
+        $(page).find('.left')
+                .on('click', function () {
+                    window.history.go(-1);
                 });
 
     });

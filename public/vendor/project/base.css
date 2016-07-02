@@ -433,6 +433,7 @@ textarea.app-input {
     font-size: 18px;
     font-weight: 300;
     text-align: center;
+    color:#dd2f30;
 }
 .app-dialog .text {
     margin: 20px 0;
@@ -457,7 +458,7 @@ textarea.app-input {
     color: #000;
 }
 .app-dialog .button.ok {
-    background-color: #2B9;
+    background-color: #dd2f30;
     color: #FFF;
 }
 .app-dialog .button.first:before {
