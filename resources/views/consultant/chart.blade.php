@@ -50,7 +50,7 @@
 <script src="{{asset('vendor/echarts/vintage.js')}}"></script>
 
 <header class="mui-bar mui-bar-nav">
-	<a class="mui-icon mui-icon-left-nav mui-pull-left" href="javascript:history.back();"></a> <a
+	<a class="mui-icon mui-icon-left-nav mui-pull-left" href="javascript:history.back();"></a>
 	<h1 class="mui-title">置业顾问统计</h1>
 </header>
 

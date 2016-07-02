@@ -228,20 +228,28 @@
 
     </div>
     <footer>
-        <nav class="mui-bar mui-bar-tab">
-            <a class="mui-tab-item mui-active">
-                <span class="mui-icon mui-icon-home"></span>
-                <span class="mui-tab-label">首页</span>
-            </a>
-            <a class="mui-tab-item" href="/projectlist">
-                <span class="mui-icon mui-icon-videocam"></span>
-                <span class="mui-tab-label">看房</span>
-            </a>
-            <a class="mui-tab-item" href="/user">
-                <span class="mui-icon mui-icon-person"></span>
-                <span class="mui-tab-label">我的</span>
-            </a>
-        </nav>
+        <div class="mui-bar-tab-self">
+            <div class="mui-row">
+                <div class="mui-col-xs-4 mui-bar-item-self ">
+                    <a  class="mui-active-self">
+                        <div class="mui-icon mui-icon-home"></div>
+                        <div class="mui-tab-label">首页</div>
+                    </a>
+                </div>
+                <div class="mui-col-xs-4 mui-bar-item-self">
+                    <a href="/projectlist">
+                        <div class="mui-icon mui-icon-videocam"></div>
+                        <div class="mui-tab-label">看房</div>
+                    </a>
+                </div>
+                <div class="mui-col-xs-4 mui-bar-item-self">
+                    <a  href="/user">
+                        <div class="mui-icon mui-icon-person"></div>
+                        <div class="mui-tab-label">我的</div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     </body>
